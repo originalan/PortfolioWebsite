@@ -1,17 +1,34 @@
-header {
-    text-align: center;
-    padding: 20px;
-    font-size: 40px;
+/* My logo is the letter Q in the font Satisfy, 100x100px */
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 10px;
+    color: #a0a0a0;
 }
-nav {
-    text-align: center;
-    padding: 10px;
-    font-size: 20px;
+.intro {
+    padding-left: 48px;
+    margin-left: 0%;
+    /* display: flex */
 }
-nav a {
-    color:red;
+.intro-small-text {
+    line-height: 0px;
+    font-size: 12px;
+}
+.intro-button {
+    border: none;
+    background-color: #d6d6d6;
+    border: none;
+    padding-left: 20px;
+    padding: 15px 35px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.intro-button:hover {
+    background:#eee;
+}
+
+.emphasis-text {
+    color: #000 !important;
+    font-weight: bold;
     text-decoration: none;
-}
-body {
-    font-size: 20px;
 }
