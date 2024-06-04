@@ -1,34 +1,91 @@
 /* My logo is the letter Q in the font Satisfy, 100x100px */
-.body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 10px;
-    color: #a0a0a0;
-}
-.intro {
-    padding-left: 48px;
-    margin-left: 0%;
-    /* display: flex */
-}
-.intro-small-text {
-    line-height: 0px;
-    font-size: 12px;
-}
-.intro-button {
-    border: none;
-    background-color: #d6d6d6;
-    border: none;
-    padding-left: 20px;
-    padding: 15px 35px;
-    font-size: 15px;
-    cursor: pointer;
-}
-.intro-button:hover {
-    background:#eee;
+*{
+    padding: 0;
+    margin: 0.5%;
 }
 
-.emphasis-text {
-    color: #000 !important;
+header {
+    height: 100px;
+    align-content: center;
+
+    border: 1px solid grey;
+}
+
+header a img {
+    height: 100px;
+    width: 75px;
+}
+
+header nav ul {
+    display: flex;
+    margin-left: 75%;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin-right: 10%;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 35px;
+    font-family: Georgia, serif;
+    color: #838383;
+}
+
+#intro { /* id */
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-content: center;
+    align-items: center;
+
+    border: 1px solid grey;
+}
+
+.intro { /* class */
+    margin-bottom: 10%;
+    margin-left: 10%;
+    font-size: 50px;
+    font-family: Georgia, serif;
+    color: #838383;
+    width: 50%;
+
+    border: 1px solid red;
+}
+
+.emphasis {
+    color: #505050;
     font-weight: bold;
     text-decoration: none;
+}
+
+.small-text {
+    font-size: 30px;
+}
+
+#about {
+    height: 100vh;
+    display: flex;
+    /* justify-content: start; */
+    align-content: center;
+    align-items: center;
+
+    border: 1px solid grey;
+}
+
+.image-about-me {
+    height: 35%;
+    width: 20%;
+}
+
+.about {
+    margin-bottom: 10%;
+    margin-left: 45%;
+    font-size: 50px;
+    font-family: Georgia, serif;
+    color: #838383;
+    width: 40%;
+
+    border: 1px solid red;
 }
