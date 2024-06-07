@@ -5,21 +5,18 @@
 }
 
 header {
-    height: 100px;
+    height: 4.5rem;
     align-content: center;
 
     border: 1px solid grey;
-}
-
-header a img {
-    height: 100px;
-    width: 75px;
 }
 
 header nav ul {
     display: flex;
     margin-left: 75%;
     list-style-type: none;
+    align-content: center;
+    align-items: center;
 }
 
 header nav ul li {
@@ -28,9 +25,51 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    font-size: 35px;
+    font-size: 1.8rem;
     font-family: Georgia, serif;
     color: #838383;
+}
+
+.header-logo-placement {
+    margin-top: 2.5%;
+    margin-left: -300%;
+    margin-right: 270%
+}
+
+.header-logo-size {
+    height: 4.5rem;
+    width: 4.5rem;
+}
+
+#social-media-overlay {
+    position: fixed;
+    bottom: 0.5%;
+    right: 2%;
+    width: 11.5%;
+
+    border: 1px solid grey;
+}
+
+#social-media-overlay ul {
+    display: flex;
+    list-style-type: none;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#social-media-overlay ul li {
+    margin: 5%;
+}
+
+#social-media-overlay ul li:hover {
+    transition: .25s ease-in-out;
+    filter: drop-shadow(1.5px 1.5px 1.5px gray);
+}
+
+#social-media-overlay ul li a img {
+    height: 3rem;
+    width: 3rem;
 }
 
 #intro { /* id */
@@ -46,7 +85,7 @@ header nav ul li a {
 .intro { /* class */
     margin-bottom: 10%;
     margin-left: 10%;
-    font-size: 50px;
+    font-size: 3rem;
     font-family: Georgia, serif;
     color: #838383;
     width: 50%;
@@ -61,7 +100,7 @@ header nav ul li a {
 }
 
 .small-text {
-    font-size: 30px;
+    font-size: 1.8rem;
 }
 
 #about {
@@ -74,15 +113,11 @@ header nav ul li a {
     border: 1px solid grey;
 }
 
-.image-about-me {
-    height: 35%;
-    width: 20%;
-}
 
 .about {
     margin-bottom: 10%;
     margin-left: 45%;
-    font-size: 50px;
+    font-size: 3rem;
     font-family: Georgia, serif;
     color: #838383;
     width: 40%;
