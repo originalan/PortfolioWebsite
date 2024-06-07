@@ -10,14 +10,14 @@
     <body>
         <header>
             <nav>
+                <div class="header-logo-placement">
+                    <a href="#intro">
+                        <img src="images/logo.png" class="header-logo-size">
+                    </a>
+                </div>
                 <ul> <!-- bulleted list -->
-                    <li class="header-logo-placement">
-                        <a href="#intro">
-                            <img src="images/logo.png" class="header-logo-size">
-                        </a>
-                    </li>
-                    <li class="one"><a href="#intro">Home</a></li>
-                    <li class="two"><a href="#about">About</a></li>
+                    <li class="one"><a href="#about">About</a></li>
+                    <li class="two"><a href="#projects">Projects</a></li>
                     <li class="three"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -25,9 +25,15 @@
         <main>
             <div class="scroll-dots">
                 <div class="scroll-control">
-                    <span class="one"></span>
-                    <span class="two"></span>
-                    <span class="three"></span>
+                    <span class="origin" id="dot-one">
+                        <a href="#intro"></a>
+                    </span>
+                    <span class="origin" id="dot-two">
+                        <a href="#about"></a>
+                    </span>
+                    <span class="origin" id="dot-three">
+                        <a href="#projects"></a>
+                    </span>
                 </div>
             </div>
 
@@ -76,9 +82,10 @@
                 </div>
             </section>
 
-            <section id="projects" class="scroll" data-section-name="projects">
+            <section class="normal-scrolling" id="projects" class="scroll" data-section-name="projects">
                 <div class="title">
-
+                    <p>PROJECTS</p>
+                    <p>a;sdlkfjalkjewf h</p>
                 </div>
                 <div>
 
@@ -93,72 +100,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous"></script>
 
-        <script>
-            $(document).ready(function () {
-
-                screenCheck();
-
-                $('.scroll-control .one').click(function() {
-                    $.scrollify.move('#intro');
-                });
-                $('.scroll-control .two').click(function() {
-                    $.scrollify.move('#about');
-                });
-                $('.scroll-control .three').click(function() {
-                    $.scrollify.move('#projects');
-                });
-
-                $('header nav ul .one').click(function() {
-                    $.scrollify.move('#intro');
-                });
-                $('header nav ul .two').click(function() {
-                    $.scrollify.move('#about');
-                });
-                $('header nav ul .header-logo-placement').click(function() {
-                    $.scrollify.move('#intro');
-                });
-            });
-
-            $(window).on('resize', function () {
-                screenCheck();
-            });
-
-            function applyScroll() {
-                $.scrollify({
-                    section : ".scroll",
-                    sectionName : "section-name",
-                    // interstitialSection : "",
-                    easing: "easeOutExpo",
-                    scrollSpeed: 1100,
-                    offset : 0,
-                    scrollbars: true,
-                    // standardScrollElements: "",
-                    setHeights: true,
-                    overflowScroll: true,
-                    updateHash: true,
-                    touchScroll:true,
-                    before:function() {},
-                    after:function() {},
-                    afterResize:function() {},
-                    afterRender:function() {}
-                });
-            }
-            function screenCheck() {
-                var deviceAgent = navigator.userAgent.toLowerCase();
-                var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
-                if (agentID || $(window).width() <= 1023) {
-                    // mobile screen
-                    $.scrollify.destroy();
-                    $('section').removeClass('scroll').removeAttr('style');
-                    $('.scroll-dots div').removeClass('scroll-control');
-                }else {
-                    // desktop
-                    $('section').addClass('scroll');
-                    $('.scroll-dots div').addClass('scroll-control');
-                    applyScroll();
-                    $.scrollify.enable();
-                }
-            }   
+        <script src="scripts.js">
         </script>
         
     </body>

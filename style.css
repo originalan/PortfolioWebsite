@@ -5,30 +5,30 @@
 }
 
 body {
-    background-color: lightgray;
+    background-color: #cde6f0;
 }
 
 header {
-    background-color: lightgray;
+    background-color: #cde6f0;
     height: 4.5rem;
     align-content: center;
     position: fixed;
     width: 100%;
-    opacity: 0.9;
+    opacity: 0.8;
 
-    /* border: 1px solid grey; */
+    border: 1px solid grey;
 }
 
 header nav ul {
     display: flex;
-    margin-left: 75%;
     list-style-type: none;
     align-content: center;
     align-items: center;
+    justify-content: right;
 }
 
 header nav ul li {
-    margin-right: 10%;
+    margin-right: 40px;
 }
 
 header nav ul li a {
@@ -44,9 +44,9 @@ header nav ul li a:hover {
 }
 
 .header-logo-placement {
-    margin-top: 2.5%;
-    margin-left: -300%;
-    margin-right: 270%
+    top: 0rem;
+    left: 0rem;
+    position: absolute;
 }
 
 .header-logo-size {
@@ -61,7 +61,7 @@ header nav ul li a:hover {
     z-index: 999;
 }
 
-.scroll-control span {
+.scroll-control .origin {
     cursor: pointer;
     display: block;
     width: 14px;
@@ -72,8 +72,19 @@ header nav ul li a:hover {
     opacity: 0.5;
 }
 
-.scroll-control span:hover {
+.scroll-control .origin:hover {
     transition: 0.25s ease-in-out;
+    opacity: 1;
+}
+
+.bolded {
+    cursor: pointer;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 10px 0;
+    background-color: #000;
     opacity: 1;
 }
 
@@ -85,7 +96,7 @@ header nav ul li a:hover {
     height: 8%;
     align-content: center;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
 
     border: 1px solid grey;
 }
@@ -95,7 +106,7 @@ header nav ul li a:hover {
     list-style-type: none;
     align-content: center;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
 }
 
 #social-media-overlay ul li {
@@ -171,8 +182,20 @@ header nav ul li a:hover {
 }
 
 #projects {
-    min-height: 200vh;
+    height: 200vh;
     display: flex;
 
-    border: 1px solid grey;
+    border: 5px solid grey;
+}
+
+#projects .title {
+    margin-top: 10%;
+    margin-left: 10%;
+    font-size: 5rem;
+    font-family: Georgia, serif;
+    color: #838383;
+    width: 30%;
+    height: 10%;
+
+    border: 1px solid red;
 }
