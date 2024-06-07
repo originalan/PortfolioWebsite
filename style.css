@@ -54,14 +54,14 @@ header nav ul li a:hover {
     width: 4.5rem;
 }
 
-#scroll-control {
+.scroll-control {
     position: fixed;
     left: 2%;
     top: 50%;
     z-index: 999;
 }
 
-#scroll-control span {
+.scroll-control span {
     cursor: pointer;
     display: block;
     width: 14px;
@@ -72,7 +72,7 @@ header nav ul li a:hover {
     opacity: 0.5;
 }
 
-#scroll-control span:hover {
+.scroll-control span:hover {
     transition: 0.25s ease-in-out;
     opacity: 1;
 }
@@ -82,6 +82,10 @@ header nav ul li a:hover {
     bottom: 0.5%;
     right: 2%;
     width: 11.5%;
+    height: 8%;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
 
     border: 1px solid grey;
 }
@@ -167,7 +171,7 @@ header nav ul li a:hover {
 }
 
 #projects {
-    height: 200vh;
+    min-height: 200vh;
     display: flex;
 
     border: 1px solid grey;

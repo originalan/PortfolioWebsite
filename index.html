@@ -16,19 +16,22 @@
                             <img src="images/logo.png" class="header-logo-size">
                         </a>
                     </li>
-                    <li><a href="#intro">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="one"><a href="#intro">Home</a></li>
+                    <li class="two"><a href="#about">About</a></li>
+                    <li class="three"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <div id="scroll-control">
-                <span class="one"></span>
-                <span class="two"></span>
-                <span class="three"></span>
+            <div class="scroll-dots">
+                <div class="scroll-control">
+                    <span class="one"></span>
+                    <span class="two"></span>
+                    <span class="three"></span>
+                </div>
             </div>
-            <section id="social-media-overlay">
+
+            <div id="social-media-overlay">
                 <ul>
                     <li class="social-media-overlay-p1">
                         <a href="https://instagram.com" target="_blank">
@@ -46,8 +49,8 @@
                         </a>
                     </li>
                 </ul>
-            </section>
-            <section id="intro">
+            </div>
+            <section id="intro" class="scroll" data-section-name="intro">
                 <div class="intro">
                     <p class="emphasis">
                         Hi, I'm Alan.
@@ -61,7 +64,7 @@
                 </div>
             </section>
 
-            <section id="about">
+            <section id="about" class="scroll" data-section-name="about">
                 <img type="image/png" src="images/logo.png">
                 <div class="about">
                     <p class="small-text">
@@ -73,7 +76,7 @@
                 </div>
             </section>
 
-            <section id="projects">
+            <section id="projects" class="scroll" data-section-name="projects">
                 <div class="title">
 
                 </div>
@@ -86,5 +89,77 @@
         <footer>
 
         </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous"></script>
+
+        <script>
+            $(document).ready(function () {
+
+                screenCheck();
+
+                $('.scroll-control .one').click(function() {
+                    $.scrollify.move('#intro');
+                });
+                $('.scroll-control .two').click(function() {
+                    $.scrollify.move('#about');
+                });
+                $('.scroll-control .three').click(function() {
+                    $.scrollify.move('#projects');
+                });
+
+                $('header nav ul .one').click(function() {
+                    $.scrollify.move('#intro');
+                });
+                $('header nav ul .two').click(function() {
+                    $.scrollify.move('#about');
+                });
+                $('header nav ul .header-logo-placement').click(function() {
+                    $.scrollify.move('#intro');
+                });
+            });
+
+            $(window).on('resize', function () {
+                screenCheck();
+            });
+
+            function applyScroll() {
+                $.scrollify({
+                    section : ".scroll",
+                    sectionName : "section-name",
+                    // interstitialSection : "",
+                    easing: "easeOutExpo",
+                    scrollSpeed: 1100,
+                    offset : 0,
+                    scrollbars: true,
+                    // standardScrollElements: "",
+                    setHeights: true,
+                    overflowScroll: true,
+                    updateHash: true,
+                    touchScroll:true,
+                    before:function() {},
+                    after:function() {},
+                    afterResize:function() {},
+                    afterRender:function() {}
+                });
+            }
+            function screenCheck() {
+                var deviceAgent = navigator.userAgent.toLowerCase();
+                var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
+                if (agentID || $(window).width() <= 1023) {
+                    // mobile screen
+                    $.scrollify.destroy();
+                    $('section').removeClass('scroll').removeAttr('style');
+                    $('.scroll-dots div').removeClass('scroll-control');
+                }else {
+                    // desktop
+                    $('section').addClass('scroll');
+                    $('.scroll-dots div').addClass('scroll-control');
+                    applyScroll();
+                    $.scrollify.enable();
+                }
+            }   
+        </script>
+        
     </body>
 </html>
