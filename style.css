@@ -113,14 +113,19 @@ header nav ul li a {
     border: 1px solid grey;
 }
 
-
 .about {
     margin-bottom: 10%;
-    margin-left: 45%;
+    margin-left: 0%;
     font-size: 3rem;
     font-family: Georgia, serif;
     color: #838383;
     width: 40%;
 
     border: 1px solid red;
+}
+
+#about img {
+    height: 10rem;
+    width: 10rem;
+    margin-left: 30%;
 }
