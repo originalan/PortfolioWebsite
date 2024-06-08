@@ -15,8 +15,6 @@ header {
     position: fixed;
     width: 100%;
     opacity: 0.8;
-
-    border: 1px solid grey;
 }
 
 header nav ul {
@@ -39,14 +37,19 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    transition: 0.5s;
-    opacity: 0.75;
+    transition: 0.25s;
+    opacity: 0.7;
 }
 
 .header-logo-placement {
     top: 0rem;
     left: 0rem;
     position: absolute;
+}
+
+.header-logo-placement:hover {
+    transition: 0.25s;
+    opacity: 0.7;
 }
 
 .header-logo-size {
@@ -97,8 +100,6 @@ header nav ul li a:hover {
     align-content: center;
     align-items: center;
     justify-content: right;
-
-    border: 1px solid grey;
 }
 
 #social-media-overlay ul {
@@ -194,9 +195,9 @@ header nav ul li a:hover {
     border: 1px solid grey;
 }
 
-.about {
-    margin-bottom: 10%;
-    margin-left: 0%;
+.about-text {
+    position: absolute;
+    margin-left: 40%;
     font-size: 3rem;
     font-family: Georgia, serif;
     color: #838383;
@@ -206,13 +207,13 @@ header nav ul li a:hover {
 }
 
 #about img {
-    height: 10rem;
-    width: 10rem;
-    margin-left: 30%;
+    position: absolute;
+    transform: scale(0.5, 0.5);
+    margin-left: 13%;
 }
 
 #projects {
-    height: 200vh;
+    height: 300vh;
     display: flex;
 
     border: 5px solid grey;
