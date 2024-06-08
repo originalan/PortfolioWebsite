@@ -136,6 +136,7 @@ header nav ul li a:hover {
 }
 
 .intro { /* class */
+    position: absolute;
     margin-left: 10%;
     font-size: 3rem;
     font-family: Georgia, serif;
@@ -165,24 +166,32 @@ header nav ul li a:hover {
 .intro .container {
     width: 34%;
     height: 3rem;
+    padding-bottom: 0.75rem;
 }
 
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
-.fade-in-text {
-    animation: fadeIn 0.75s;
+
+.fade-in-text .description {
+    opacity: 0;
+    padding-bottom: 0.75rem;
+    animation: fadeIn 1.5s forwards;
+    animation-delay: 0.25s;
+}
+
+.fade-in-text .small-text {
+    opacity: 0;
+    font-size: 1.8rem;
+    animation: fadeIn 1.5s forwards;
+    animation-delay: 0.5s;
 }
 
 .emphasis {
     color: #505050;
     font-weight: bold;
     text-decoration: none;
-}
-
-.small-text {
-    font-size: 1.8rem;
 }
 
 #about {
@@ -206,10 +215,44 @@ header nav ul li a:hover {
     border: 1px solid red;
 }
 
+.about-text .description {
+    opacity: 0;
+}
+
+.about-text .container {
+    width: 35.5%;
+    /* height: 2rem; */
+}
+
+.about-text .container .small-text{
+    font-size: 1.8rem;
+    overflow: hidden;
+    border-right: 0.15rem solid orange;
+    width: 1px;
+    white-space: nowrap;
+}
+
+#about .about-text .container .in-view {
+    animation: typing 1.5s steps(20) forwards,
+        blink-caret 1s step-end infinite;
+    animation-delay: 0s, 2s;
+}
+
 #about img {
+    opacity: 0;
     position: absolute;
     transform: scale(0.5, 0.5);
     margin-left: 13%;
+}
+
+#about .in-view.description {
+    animation: fadeIn 1.5s forwards;
+    animation-delay: 0.25s;
+}
+
+#about .in-view.pic {
+    animation: fadeIn 1.5s forwards;
+    animation-delay: 0.5s;
 }
 
 #projects {
