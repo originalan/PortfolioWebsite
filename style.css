@@ -144,6 +144,36 @@ header nav ul li a:hover {
     border: 1px solid red;
 }
 
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100%}
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+.typed-out-text {
+    overflow: hidden;
+    border-right: 0.15rem solid orange;
+    width: 0;
+    animation: typing 1s steps(20) forwards,
+        blink-caret 1s step-end infinite;
+    animation-delay: 0s, 1.5s;
+    white-space: nowrap;
+}
+.intro .container {
+    width: 34%;
+    height: 3rem;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.fade-in-text {
+    animation: fadeIn 0.75s;
+}
+
 .emphasis {
     color: #505050;
     font-weight: bold;

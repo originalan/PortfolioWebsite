@@ -49,7 +49,9 @@ function applyScroll() {
         updateHash: true,
         touchScroll:true,
         before:function() {},
-        after:function() {},
+        after:function() {
+            updateDots();
+        },
         afterResize:function() {},
         afterRender:function() {}
     });
