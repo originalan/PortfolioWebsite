@@ -15,6 +15,7 @@ header {
     position: fixed;
     width: 100%;
     opacity: 0.8;
+    z-index: 998;
 }
 
 header nav ul {
@@ -131,8 +132,6 @@ header nav ul li a:hover {
     justify-content: start;
     align-content: center;
     align-items: center;
-
-    border: 1px solid grey;
 }
 
 .intro { /* class */
@@ -142,8 +141,6 @@ header nav ul li a:hover {
     font-family: Georgia, serif;
     color: #838383;
     width: 50%;
-
-    border: 1px solid red;
 }
 
 @keyframes typing {
@@ -158,9 +155,9 @@ header nav ul li a:hover {
     overflow: hidden;
     border-right: 0.15rem solid orange;
     width: 0;
-    animation: typing 1s steps(20) forwards,
+    animation: typing 1.5s steps(20) forwards,
         blink-caret 1s step-end infinite;
-    animation-delay: 0s, 1.5s;
+    animation-delay: 0s, 2s;
     white-space: nowrap;
 }
 .intro .container {
@@ -200,8 +197,6 @@ header nav ul li a:hover {
     /* justify-content: start; */
     align-content: center;
     align-items: center;
-
-    border: 1px solid grey;
 }
 
 .about-text {
@@ -220,7 +215,7 @@ header nav ul li a:hover {
 }
 
 .about-text .container {
-    width: 35.5%;
+    width: 35.25%;
     /* height: 2rem; */
 }
 
@@ -228,7 +223,7 @@ header nav ul li a:hover {
     font-size: 1.8rem;
     overflow: hidden;
     border-right: 0.15rem solid orange;
-    width: 1px;
+    width: 0;
     white-space: nowrap;
 }
 
@@ -263,13 +258,14 @@ header nav ul li a:hover {
 }
 
 #projects .title {
-    margin-top: 10%;
-    margin-left: 10%;
-    font-size: 5rem;
+    position: absolute;
+    margin-top: 10rem;
+    margin-left: 10rem;
+    font-size: 4rem;
     font-family: Georgia, serif;
     color: #838383;
-    width: 30%;
-    height: 10%;
+    /* width: 30%;
+    height: 10%; */
 
     border: 1px solid red;
 }
