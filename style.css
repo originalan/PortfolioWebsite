@@ -40,6 +40,7 @@ header nav ul li a {
 header nav ul li a:hover {
     transition: 0.25s;
     opacity: 0.7;
+    cursor: pointer;
 }
 
 .header-logo-placement {
@@ -51,6 +52,7 @@ header nav ul li a:hover {
 .header-logo-placement:hover {
     transition: 0.25s;
     opacity: 0.7;
+    cursor: pointer;
 }
 
 .header-logo-size {
@@ -79,6 +81,7 @@ header nav ul li a:hover {
 .scroll-control .origin:hover {
     transition: 0.25s ease-in-out;
     opacity: 1;
+    cursor: pointer;
 }
 
 .bolded {
@@ -101,6 +104,7 @@ header nav ul li a:hover {
     align-content: center;
     align-items: center;
     justify-content: right;
+    z-index: 997;
 }
 
 #social-media-overlay ul {
@@ -264,8 +268,6 @@ header nav ul li a:hover {
     font-size: 4rem;
     font-family: Georgia, serif;
     color: #838383;
-    /* width: 30%;
-    height: 10%; */
-
+    
     border: 1px solid red;
 }

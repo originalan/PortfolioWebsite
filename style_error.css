@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0%;
+}
+
+body {
+    background-color: #cde6f0;
+}
+
+header {
+    background-color: #cde6f0;
+    height: 4.5rem;
+    align-content: center;
+    position: fixed;
+    width: 100%;
+    opacity: 0.8;
+    z-index: 998;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    align-content: center;
+    align-items: center;
+    justify-content: right;
+}
+
+header nav ul li {
+    margin-right: 40px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: Georgia, serif;
+    color: #838383;
+}
+
+header nav ul li a:hover {
+    transition: 0.25s;
+    opacity: 0.7;
+}
+
+.header-logo-placement {
+    top: 0rem;
+    left: 0rem;
+    position: absolute;
+}
+
+.header-logo-placement:hover {
+    transition: 0.25s;
+    opacity: 0.7;
+}
+
+.header-logo-size {
+    height: 4.5rem;
+    width: 4.5rem;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+ 
+main .container {
+    width: 46.7%;
+}
+
+.message {
+    margin-bottom: 5rem;
+    font-size: 3rem;
+    font-family: Georgia, serif;
+    color: #838383;
+    /* width: 50%; */
+    justify-content: center;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100%}
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+.typed-out-text {
+    overflow: hidden;
+    border-right: 0.15rem solid orange;
+    width: 0;
+    animation: typing 1.5s steps(20) forwards,
+        blink-caret 1s step-end infinite;
+    animation-delay: 0s, 2s;
+    white-space: nowrap;
+}
+
+.button {
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    margin-top: 5rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 10rem;
+    height: 3rem;
+
+    font-size: 2rem;
+    align-content: center;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    color: #838383;
+    background-color: rgb(148, 219, 216);
+}
+
+.button:hover {
+    transition: 0.25s ease-in-out;
+    color:rgb(51, 51, 51);
+}
