@@ -185,8 +185,9 @@ header nav ul li a:hover {
 }
 
 .fade-in-text .description.in-view {
-    animation: fadeIn 1.5s forwards;
-    animation-delay: 0.25s;
+    animation: fadeIn 1.5s forwards,
+        moveIn 1s forwards;;
+    animation-delay: 0.25s, 0.25s;
 }
 
 .fade-in-text .small-text {
@@ -195,8 +196,9 @@ header nav ul li a:hover {
 }
 
 .fade-in-text .small-text.in-view {
-    animation: fadeIn 1.5s forwards;
-    animation-delay: 0.5s;
+    animation: fadeIn 1.5s forwards,
+        moveIn 1s forwards;;
+    animation-delay: 0.5s, 0.5s;
 }
 
 .emphasis {
@@ -227,8 +229,6 @@ header nav ul li a:hover {
     font-family: Verdana, sans-serif;
     color: #464646;
     width: 40%;
-
-    border: 1px solid red;
 }
 
 .about-text .description {
@@ -256,7 +256,12 @@ header nav ul li a:hover {
     animation-delay: 0s, 2s;
 }
 
-#about img {
+@keyframes moveInPic {
+    from {transform: translateY(3rem) scale(0.5, 0.5)}
+    to {transform: translateY(0rem) scale(0.5, 0.5)}
+}
+
+#about .pic {
     opacity: 0;
     position: absolute;
     transform: scale(0.5, 0.5);
@@ -264,13 +269,15 @@ header nav ul li a:hover {
 }
 
 #about .in-view.description {
-    animation: fadeIn 1.5s forwards;
-    animation-delay: 0.25s;
+    animation: fadeIn 1.5s forwards,
+        moveIn 1s forwards;;
+    animation-delay: 0.25s, 0.25s;
 }
 
 #about .in-view.pic {
-    animation: fadeIn 1.5s forwards;
-    animation-delay: 0.5s;
+    animation: fadeIn 1.5s forwards,
+        moveInPic 1s forwards;;
+    animation-delay: 0.5s, 0.5s;
 }
 
 #projects {
@@ -284,7 +291,7 @@ header nav ul li a:hover {
 }
 
 #projects .title {
-    margin-top: 10rem;
+    margin-top: 7.5rem;
     margin-left: 10rem;
     font-size: 4rem;
     font-family: Verdana, sans-serif;
@@ -308,21 +315,35 @@ header nav ul li a:hover {
     font-family: Verdana, sans-serif;
 }
 
+@keyframes moveIn {
+    from {transform: translateY(3rem)}
+    to {transform: translateY(0rem)}
+}
+
 #projects .list li {
-    margin-left: 15rem;
+    margin-left: 20rem;
     width: 50rem;
+    margin-bottom: 25rem;
+    opacity: 0;
     /* border: 1px solid red; */
 }
 
-#projects .list .first {
+#projects .list li.in-view {
+    animation: fadeIn 1.5s forwards,
+        moveIn 1s forwards;
+    animation-delay: 0.5s, 0.5s;
+}
+
+#projects .list .one {
     margin-top: 25rem;
 }
 
 #projects .list .date {
     text-transform: uppercase;
     font-style: italic;
-    font-size: 1.1rem;
-    margin-left: 0.5%;
+    font-size: 0.9rem;
+    padding: 0.25rem;
+    color: rgb(129, 129, 129);
 }
 
 #projects .list .heading {
@@ -337,25 +358,37 @@ header nav ul li a:hover {
 
 #projects .list .button {
     position: absolute;
-    text-align: center;
+    text-align: left;
     white-space: nowrap;
-    vertical-align: middle;
-    margin-top: 0.5rem;
-    margin-left: 3rem;
+    /* margin-top: 0.5rem; */
+    align-content: center;
+    /* margin-left: 3rem; */
     cursor: pointer;
-    border: 1px solid transparent;
     border-radius: 4px;
     width: 10rem;
-    height: 3rem;
-
-    font-size: 1.2rem;
-    align-content: center;
-    text-decoration: none;
+    height: 2.5rem;
     color: #464646;
-    background-color: rgb(148, 219, 216);
+
+    text-decoration: none;
 }
 
-#projects .list .button:hover {
+#projects .list .button .text {
+    margin-left: 1rem;
+    font-size: 1rem;
+    margin-right: -0.1rem;
+}
+
+#projects .list .button:hover .text {
     transition: 0.25s ease-in-out;
     color:black;
 }
+
+#projects .list .button .arrow {
+    font-size: 1.1rem;
+}
+
+#projects .list .button:hover .arrow {
+    transition: 0.25s ease-in-out;
+    margin-left: 0.8rem;
+}
+

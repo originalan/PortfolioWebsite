@@ -1,133 +1,191 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <meta charset="utf-8">
-        <title>Alan Qu</title>
-        <link rel="icon" type="image/png" href="images/logo.png"/>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class="header-logo-placement">
-                    <a href="#intro">
-                        <img src="images/logo.png" class="header-logo-size">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Alan Qu</title>
+    <link rel="icon" type="image/png" href="images/logo.png" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="header-logo-placement">
+                <a href="#intro">
+                    <img src="images/logo.png" class="header-logo-size">
+                </a>
+            </div>
+            <ul> <!-- bulleted list -->
+                <li class="one"><a href="#about">About</a></li>
+                <li class="two"><a href="#projects">Projects</a></li>
+                <li class="three"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="scroll-dots">
+            <div class="scroll-control">
+                <span class="origin" id="dot-one">
+                    <a href="#intro"></a>
+                </span>
+                <span class="origin" id="dot-two">
+                    <a href="#about"></a>
+                </span>
+                <span class="origin" id="dot-three">
+                    <a href="#projects"></a>
+                </span>
+            </div>
+        </div>
+
+        <div id="social-media-overlay">
+            <ul>
+                <li class="social-media-overlay-p1">
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="images/instagram-logo.png">
                     </a>
+                </li>
+                <li class="social-media-overlay-p2">
+                    <a href="https://github.com" target="_blank">
+                        <img src="images/github-logo.png">
+                    </a>
+                </li>
+                <li class="social-media-overlay-p3">
+                    <a href="https://linkedin.com" target="_blank">
+                        <img src="images/linkedin-logo.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <section id="intro" class="scroll" data-section-name="intro">
+            <div class="intro">
+                <div class="container">
+                    <div class="typed-out-text animate">
+                        <p class="emphasis">
+                            Hi, I'm Alan.
+                        <p>
+                    </div>
                 </div>
-                <ul> <!-- bulleted list -->
-                    <li class="one"><a href="#about">About</a></li>
-                    <li class="two"><a href="#projects">Projects</a></li>
-                    <li class="three"><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <div class="scroll-dots">
-                <div class="scroll-control">
-                    <span class="origin" id="dot-one">
-                        <a href="#intro"></a>
-                    </span>
-                    <span class="origin" id="dot-two">
-                        <a href="#about"></a>
-                    </span>
-                    <span class="origin" id="dot-three">
-                        <a href="#projects"></a>
-                    </span>
-                </div>
-            </div>
 
-            <div id="social-media-overlay">
-                <ul>
-                    <li class="social-media-overlay-p1">
-                        <a href="https://instagram.com" target="_blank">
-                            <img src="images/instagram-logo.png">
-                        </a>
-                    </li>
-                    <li class="social-media-overlay-p2">
-                        <a href="https://github.com" target="_blank">
-                            <img src="images/github-logo.png">
-                        </a>
-                    </li>
-                    <li class="social-media-overlay-p3">
-                        <a href="https://linkedin.com" target="_blank">
-                            <img src="images/linkedin-logo.png">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <section id="intro" class="scroll" data-section-name="intro">
-                <div class="intro">
-                    <div class="container">
-                        <div class="typed-out-text animate">
-                            <p class="emphasis">
-                                Hi, I'm Alan.
-                            <p>
-                        </div>
-                    </div>
-                    
-                    <div class="fade-in-text">
-                        <p class="description animate">
-                            I'm a student in high school working to be a <strong class="emphasis">mechanical engineer</strong>.
-                        </p>
-                        <p class="small-text animate">
-                            Currently, I am enrolled in <a href="https://www.mhrd.org/domain/102" target="_blank" class="emphasis link">The Academy for MSE</a>.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="about" class="scroll" data-section-name="about">
-                <img class="pic animate" type="image/jpg" src="images/yearbook-pic.jpg">
-                <div class="about-text">
-                    <div class="container">
-                        <p class="small-text animate">
-                            A bit more about me
-                        </p>
-                    </div>
+                <div class="fade-in-text">
                     <p class="description animate">
-                        Hi, I am sapdklfjakejshflkajsdf jncjb dsjfn lkjnckl hslkejrn ldknl kjnck. alksjdnflkjzcnlkj hdsfjncj sjdblkfjnal kesjnflkjncxvljnlkjner d.
+                        I'm a student in high school working to be a <strong class="emphasis">mechanical
+                            engineer</strong>.
+                    </p>
+                    <p class="small-text animate">
+                        Currently, I am enrolled in <a href="https://www.mhrd.org/domain/102" target="_blank"
+                            class="emphasis link">The Academy for MSE</a>.
                     </p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="normal-scrolling" id="projects" class="scroll" data-section-name="projects">
+        <section id="about" class="scroll" data-section-name="about">
+            <img class="pic animate" type="image/jpg" src="images/yearbook-pic.jpg">
+            <div class="about-text">
                 <div class="container">
-                    <div class="title animate">
-                        <p>Projects</p>
-                    </div>
+                    <p class="small-text animate">
+                        A bit more about me
+                    </p>
                 </div>
-                <ul class="list">
-                    <li class="first">
-                        <div class="date">
-                            september 2023 - present
-                        </div>
-                        <div class="heading">
-                            FTC Robotics
-                        </div>
-                        <div class="description">
-                            I participated in the FIRST Tech Challenge (FTC) competition as the lead programmer on the school team. We placeaksjfdld falkj flkasdnflk jnaslkdfjn alksdjf;alksdjf;laksjdf;l ja;sdk j
-                        </div>
-                        <div class="images">
-                            
-                        </div>
-                        <a href="#about" class="button">
+                <p class="description animate">
+                    As a rising senior, I've always had a love for STEM. The experiences I've had have taught me skills in CAD, electricity, and programming and the importance of discipline and hard work needed to succeed. 
+                </p>
+            </div>
+        </section>
+
+        <section class="normal-scrolling" id="projects" class="scroll" data-section-name="projects">
+            <div class="container">
+                <div class="title animate">
+                    <p>Projects</p>
+                </div>
+            </div>
+            <ul class="list">
+                <li class="one animate">
+                    <div class="date">
+                        september 2023 - present
+                    </div>
+                    <div class="heading">
+                        FTC Robotics
+                    </div>
+                    <div class="description">
+                        &emsp;&emsp; Serving as the lead programmer and main builder to place high in the state in a competitive robotics challenge. 
+                        <!-- &emsp;&emsp; I participated in the FIRST Tech Challenge (FTC) competition as the lead programmer on the
+                        school team. I programmed teleoperational and autonomous movement using inverse kinematics, finite state machines, and control theory. I also helped signifcantly in modeling and designing the physical robot.   -->
+                    </div>
+                    <div class="images">
+
+                    </div>
+                    <a href="#about" class="button">
+                        <span class="text">
                             Learn More
-                        </a>
-                    </li>
-                </ul>
-            </section>
+                        </span>
+                        <span class="arrow">
+                            &rarr;
+                        </span>
+                    </a>
+                </li>
+                <li class="two animate">
+                    <div class="date">
+                        september 2023 - present
+                    </div>
+                    <div class="heading">
+                        VoicePilot
+                    </div>
+                    <div class="description">
+                        &emsp;&emsp;A project utilizing face and voice to interact with the computer in a way never seen before. 
+                    </div>
+                    <div class="images">
 
-        </main>
-        <footer>
+                    </div>
+                    <a href="#about" class="button">
+                        <span class="text">
+                            Learn More
+                        </span>
+                        <span class="arrow">
+                            &rarr;
+                        </span>
+                    </a>
+                </li>
+                <li class="three animate">
+                    <div class="date">
+                        september 2023 - present
+                    </div>
+                    <div class="heading">
+                        LEGO Project
+                    </div>
+                    <div class="description">
+                        Designing and creating a full LEGO set with packaging, engineering drawings, and a physical prototype. 
+                    </div>
+                    <div class="images">
 
-        </footer>
+                    </div>
+                    <a href="#about" class="button">
+                        <span class="text">
+                            Learn More
+                        </span>
+                        <span class="arrow">
+                            &rarr;
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </section>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous"></script>
+    </main>
+    <footer>
 
-        <script src="scripts.js"> </script>
-        <script src="animateIfInView.js"></script>
-        
-    </body>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
+        integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
+        crossorigin="anonymous"></script>
+
+    <script src="scripts.js"> </script>
+    <script src="animateIfInView.js"></script>
+
+</body>
+
 </html>
