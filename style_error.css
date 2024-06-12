@@ -5,6 +5,13 @@
 
 body {
     background-color: #cde6f0;
+    overflow-y: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
 }
 
 header {
@@ -32,13 +39,14 @@ header nav ul li {
 header nav ul li a {
     text-decoration: none;
     font-size: 1.8rem;
-    font-family: Georgia, serif;
-    color: #838383;
+    font-family: Verdana, sans-serif;
+    color: #464646;
 }
 
 header nav ul li a:hover {
     transition: 0.25s;
     opacity: 0.7;
+    cursor: pointer;
 }
 
 .header-logo-placement {
@@ -50,6 +58,7 @@ header nav ul li a:hover {
 .header-logo-placement:hover {
     transition: 0.25s;
     opacity: 0.7;
+    cursor: pointer;
 }
 
 .header-logo-size {
@@ -66,14 +75,14 @@ main {
 }
  
 main .container {
-    width: 46.7%;
+    width: 45.6%;
 }
 
 .message {
     margin-bottom: 5rem;
-    font-size: 3rem;
-    font-family: Georgia, serif;
-    color: #838383;
+    font-size: 2.5rem;
+    font-family: Verdana, sans-serif;
+    color: #464646;
     /* width: 50%; */
     justify-content: center;
 }
@@ -90,7 +99,7 @@ main .container {
     overflow: hidden;
     border-right: 0.15rem solid orange;
     width: 0;
-    animation: typing 1.5s steps(20) forwards,
+    animation: typing 2s steps(50) forwards,
         blink-caret 1s step-end infinite;
     animation-delay: 0s, 2s;
     white-space: nowrap;
@@ -103,20 +112,41 @@ main .container {
     vertical-align: middle;
     margin-top: 5rem;
     cursor: pointer;
-    border: 1px solid transparent;
-    border-radius: 4px;
     width: 10rem;
     height: 3rem;
+}
 
+.button a {
     font-size: 2rem;
     align-content: center;
     text-decoration: none;
-    font-family: Georgia, serif;
-    color: #838383;
-    background-color: rgb(148, 219, 216);
+    font-family: Verdana, sans-serif;
+    color: rgb(129, 129, 129);
+    font-weight: bolder;
 }
 
-.button:hover {
+.button:hover a {
     transition: 0.25s ease-in-out;
-    color:rgb(51, 51, 51);
+    color:rgb(61, 61, 61);
+}
+
+@keyframes moveArrow {
+    from {transform: translateY(0rem) rotate(45deg)}
+    to {transform: translateY(1rem) rotate(45deg)}
+}
+
+.button:hover .down-arrow {
+    animation: moveArrow 0.25s forwards;
+    animation-delay: 0s;
+    border-color: rgb(61, 61, 61);
+    transition: 0.25s ease-in-out;
+}
+
+.down-arrow {
+    border: solid rgb(129, 129, 129);
+    border-width: 0 0.4rem 0.4rem 0;
+    display: inline-block;
+    padding: 0.6rem;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }

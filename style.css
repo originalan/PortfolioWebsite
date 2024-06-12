@@ -201,6 +201,12 @@ header nav ul li a:hover {
     animation-delay: 0.5s, 0.5s;
 }
 
+.fade-in-text .small-text a:hover {
+    transition: 0.25s ease-in-out;
+    text-decoration-color: gray;
+    color: rgb(61, 61, 61);
+}
+
 .emphasis {
     color: #505050;
     font-weight: bold;
@@ -281,7 +287,7 @@ header nav ul li a:hover {
 }
 
 #projects {
-    height: 300vh;
+    height: 250vh;
     display: flex;
 }
 
@@ -313,6 +319,9 @@ header nav ul li a:hover {
     list-style-type: none;
     color: #464646;
     font-family: Verdana, sans-serif;
+
+    /* border: 1px solid red; */
+    height: 190vh;
 }
 
 @keyframes moveIn {
@@ -357,25 +366,25 @@ header nav ul li a:hover {
 }
 
 #projects .list .button {
-    position: absolute;
     text-align: left;
     white-space: nowrap;
-    /* margin-top: 0.5rem; */
     align-content: center;
-    /* margin-left: 3rem; */
     cursor: pointer;
     border-radius: 4px;
     width: 10rem;
     height: 2.5rem;
-    color: #464646;
+}
 
+#projects .list .button a {
     text-decoration: none;
+    color: #464646;
 }
 
 #projects .list .button .text {
     margin-left: 1rem;
     font-size: 1rem;
     margin-right: -0.1rem;
+    font-weight: bolder;
 }
 
 #projects .list .button:hover .text {
@@ -392,3 +401,56 @@ header nav ul li a:hover {
     margin-left: 0.8rem;
 }
 
+#projects .more-projects {
+    position: absolute;
+    width: 15%;
+    height: 3rem;
+    text-align: center;
+    margin-left: 42.5%;
+    margin-top: 115%;
+    opacity: 0;
+}
+
+#projects .more-projects.in-view {
+    animation: fadeIn 1.5s forwards,
+        moveIn 1s forwards;
+    animation-delay: 0.5s, 0.5s;
+}
+
+#projects .more-projects a {
+    text-decoration: none;
+    color: rgb(129, 129, 129);
+    font-weight: bolder;
+    font-size: 2rem;
+    font-family: Verdana, sans-serif;
+}
+
+#projects .more-projects:hover a {
+    transition: 0.25s ease-in-out;
+    color: rgb(61, 61, 61);
+}
+
+#projects .more-projects:hover {
+    cursor: pointer;
+}
+
+#projects .more-projects:hover .down-arrow {
+    animation: moveArrow 0.25s forwards;
+    animation-delay: 0s;
+    border-color: rgb(61, 61, 61);
+    transition: 0.25s ease-in-out;
+}
+
+@keyframes moveArrow {
+    from {transform: translateY(0rem) rotate(45deg)}
+    to {transform: translateY(1rem) rotate(45deg)}
+}
+
+.down-arrow {
+    border: solid rgb(129, 129, 129);
+    border-width: 0 0.4rem 0.4rem 0;
+    display: inline-block;
+    padding: 0.6rem;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
