@@ -12,8 +12,7 @@
 }
 
 .invisible {
-    position: absolute;
-    opacity: 0;
+    display: none;
 }
 
 .scroll-control .origin {
@@ -475,8 +474,43 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .intro {
         width: 75vw;
+    }
+} 
+
+@media (max-width: 1600px) {
+    .about-text {
+        font-size: 3.25vmin;
+    }
+}
+@media (max-width: 1200px) {
+    .about-text {
+        font-size: 3vmin;
+    }
+}
+
+@media (max-width: 850px) {
+    #projects {
+        height: 105vh;
+    }
+}
+
+@media (max-width: 700px) {
+    #projects {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 600px) {
+    #projects {
+        height: 95vh;
+    }
+}
+
+@media (max-width: 500px) {
+    #projects {
+        height: 90vh;
     }
 }

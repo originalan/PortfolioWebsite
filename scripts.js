@@ -73,11 +73,20 @@ function screenCheck() {
         $('section').removeClass('scroll').removeAttr('style');
         $('.scroll-dots div').removeClass('scroll-control');
         $('.scroll-dots div').addClass('invisible');
+
+        var y = document.getElementById('standard-menu');
+        y.style.display = 'none';
+        var z = document.getElementById('hamburger-menu');
+        z.style.display = 'block';
     } else {
         // desktop
         $('section').addClass('scroll');
         $('.scroll-dots div').addClass('scroll-control');
         $('.scroll-dots div').removeClass('invisible');
+        var yy = document.getElementById('standard-menu');
+        yy.style.display = 'flex';
+        var zz = document.getElementById('hamburger-menu');
+        zz.style.display = 'none';
         applyScroll();
         $.scrollify.enable();
     }
