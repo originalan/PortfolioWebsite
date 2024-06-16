@@ -1,5 +1,10 @@
 :root {
-    --main-background-color: #D66853;
+    --palette-color-0: #071108;
+    --palette-color-1: #364652;
+    --palette-color-2: #9395D3;
+    --palette-color-3: #B3B7EE;
+    --palette-color-4: #A2A3BB;
+    --main-background-color: #FBF9FF;
 }
 
 body {
@@ -38,12 +43,12 @@ header nav ul li a {
     text-decoration: none;
     font-size: 2.8vh;
     font-family: Verdana, sans-serif;
-    color: #464646;
+    color: var(--palette-color-3);
 }
 
 header nav ul li a:hover {
     transition: 0.25s;
-    opacity: 0.85;
+    color: var(--palette-color-2);
     cursor: pointer;
 }
 
@@ -52,11 +57,12 @@ header nav ul li a:hover {
     left: 0.5vw;
     top: 0;
     align-content: center;
+    opacity: 0.85;
 }
 
 .header-logo-placement:hover {
     transition: 0.25s;
-    opacity: 0.7;
+    opacity: 1;
     cursor: pointer;
 }
 

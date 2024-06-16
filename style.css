@@ -1,11 +1,4 @@
 /* Logo is the letter Q in the font Satisfy, 100x100px */
-:root {
-    --palette-color-1: #11151C;
-    --palette-color-2: #212D40;
-    --palette-color-3: #364156;
-    --palette-color-4: #7D4E57;
-}
-
 *{
     padding: 0;
     margin: 0%;
@@ -30,8 +23,8 @@
     height: 14px;
     border-radius: 50%;
     margin: 10px 0;
-    background-color: var(--palette-color-2);
-    opacity: 0.5;
+    background-color: var(--palette-color-0);
+    opacity: 0.6;
 }
 
 .scroll-control .origin:hover {
@@ -47,7 +40,7 @@
     height: 14px;
     border-radius: 50%;
     margin: 10px 0;
-    background-color: var(--palette-color-2);
+    background-color: var(--palette-color-0);
     opacity: 1;
 }
 
@@ -99,7 +92,7 @@
     margin-left: 10vw;
     font-size: 5vmin;
     font-family: Verdana, sans-serif;
-    color: var(--palette-color-3);
+    color: var(--palette-color-2);
     width: 50vw;
 }
 
@@ -157,14 +150,14 @@
     animation-delay: 0.5s, 0.5s;
 }
 
-.fade-in-text .small-text a:hover {
+.emphasis.link:hover {
     transition: 0.25s ease-in-out;
-    text-decoration-color: var(--palette-color-3);
-    color: rgb(61, 61, 61);
+    text-decoration-color: var(--palette-color-2);
+    color: var(--palette-color-0)
 }
 
 .emphasis {
-    color: #505050;
+    color: var(--palette-color-1);
     font-weight: bold;
     text-decoration: none;
 }
@@ -172,7 +165,7 @@
 .link {
     text-decoration: underline;
     text-underline-offset: 0.5vmin;
-    text-decoration-color: var(--palette-color-2);
+    text-decoration-color: var(--palette-color-3);
     text-decoration-style: wavy;
     text-decoration-skip-ink: none;
     z-index: 996;
@@ -193,14 +186,18 @@
 
 .about-text {
     font-family: Verdana, sans-serif;
-    color: var(--palette-color-3);
+    color: var(--palette-color-1);
     width: 40vw;
 }
 
 .about-text .description {
     opacity: 0;
-    color: var(--palette-color-3);
+    color: var(--palette-color-2);
     font-weight: bold;
+}
+
+.about-text .description .emphasis:hover {
+
 }
 
 .about-text .container {
@@ -213,6 +210,7 @@
     border-right: 0.15vw solid var(--palette-color-4);
     width: 0;
     white-space: nowrap;
+    font-weight: light;
 }
 
 #about .about-text .container .in-view {
@@ -234,9 +232,9 @@
     height: 45vmin;
     width: auto;
     
-    position: relative;
+    border-bottom: 1px
 }
-
+    
 #about .in-view.description {
     animation: fadeIn 1.5s forwards,
         moveIn 1s forwards;;
@@ -271,7 +269,7 @@
 #projects .title {
     font-size: 5.5vmin;
     font-family: Verdana, sans-serif;
-    color: #464646;
+    color: var(--palette-color-1);
     overflow: hidden;
     border-right: 0.15vw solid var(--palette-color-4);
     width: 0;
@@ -286,7 +284,7 @@
 
 #projects .list {
     list-style-type: none;
-    color: #464646;
+    color: var(--palette-color-1);
     font-family: Verdana, sans-serif;
 }
 
@@ -324,10 +322,12 @@
     margin-top: -0.5vmin;
     font-weight: bold;
     font-size: 4vmin;
+    color: var(--palette-color-1);
 }
 
 #projects .list .description {
     font-size: 2.25vmin;
+    color: var(--palette-color-1);
 }
 
 #projects .list .button {
@@ -354,7 +354,7 @@
 
 #projects .list .button:hover .text {
     transition: 0.25s ease-in-out;
-    color:var(--palette-color-2);
+    color: var(--palette-color-2);
 }
 
 #projects .list .button .arrow {
@@ -387,7 +387,7 @@
 
 #projects .more-projects a {
     text-decoration: none;
-    color: var(--palette-color-2);
+    color: var(--palette-color-1);
     font-weight: bolder;
     font-size: 3vmin;
     font-family: Verdana, sans-serif;
@@ -395,7 +395,7 @@
 
 #projects .more-projects:hover a {
     transition: 0.25s ease-in-out;
-    color: var(--palette-color-1);
+    color: var(--palette-color-0);
 }
 
 #projects .more-projects:hover {
@@ -405,7 +405,7 @@
 #projects .more-projects:hover .down-arrow {
     animation: moveArrow 0.25s forwards;
     animation-delay: 0s;
-    border-color: var(--palette-color-1);
+    border-color: var(--palette-color-0);
     transition: 0.25s ease-in-out;
 }
 
@@ -415,7 +415,7 @@
 }
 
 .down-arrow {
-    border: solid var(--palette-color-2);
+    border: solid var(--palette-color-1);
     border-width: 0 0.7vmin 0.7vmin 0;
     display: inline-block;
     padding: 1vmin;
