@@ -1,4 +1,11 @@
-/* My logo is the letter Q in the font Satisfy, 100x100px */
+/* Logo is the letter Q in the font Satisfy, 100x100px */
+:root {
+    --palette-color-1: #11151C;
+    --palette-color-2: #212D40;
+    --palette-color-3: #364156;
+    --palette-color-4: #7D4E57;
+}
+
 *{
     padding: 0;
     margin: 0%;
@@ -11,6 +18,11 @@
     z-index: 999;
 }
 
+.invisible {
+    position: absolute;
+    opacity: 0;
+}
+
 .scroll-control .origin {
     cursor: pointer;
     display: block;
@@ -18,7 +30,7 @@
     height: 14px;
     border-radius: 50%;
     margin: 10px 0;
-    background-color: #000;
+    background-color: var(--palette-color-2);
     opacity: 0.5;
 }
 
@@ -35,7 +47,7 @@
     height: 14px;
     border-radius: 50%;
     margin: 10px 0;
-    background-color: #000;
+    background-color: var(--palette-color-2);
     opacity: 1;
 }
 
@@ -84,10 +96,10 @@
 
 .intro { /* class */
     position: absolute;
-    margin-left: 10%;
-    font-size: 4vmin;
+    margin-left: 10vw;
+    font-size: 5vmin;
     font-family: Verdana, sans-serif;
-    color: #464646;
+    color: var(--palette-color-3);
     width: 50vw;
 }
 
@@ -97,11 +109,11 @@
 }
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: orange; }
+    50% { border-color: var(--palette-color-4); }
   }
 .container .typed-out-text {
     overflow: hidden;
-    border-right: 0.15rem solid orange;
+    border-right: 0.15vw solid var(--palette-color-4);
     width: 0;
     white-space: nowrap;
 }
@@ -113,9 +125,9 @@
 }
 
 .intro .container {
-    width: 28.5vmin;
+    width: 35.5vmin;
     height: 4vmin;
-    padding-bottom: 0.75vmin;
+    padding-bottom: 1.5vmin;
 }
 
 @keyframes fadeIn {
@@ -136,7 +148,7 @@
 
 .fade-in-text .small-text {
     opacity: 0;
-    font-size: 2.5vmin;
+    font-size: 3vmin;
 }
 
 .fade-in-text .small-text.in-view {
@@ -147,7 +159,7 @@
 
 .fade-in-text .small-text a:hover {
     transition: 0.25s ease-in-out;
-    text-decoration-color: gray;
+    text-decoration-color: var(--palette-color-3);
     color: rgb(61, 61, 61);
 }
 
@@ -160,7 +172,7 @@
 .link {
     text-decoration: underline;
     text-underline-offset: 0.5vmin;
-    text-decoration-color: darkgrey;
+    text-decoration-color: var(--palette-color-2);
     text-decoration-style: wavy;
     text-decoration-skip-ink: none;
     z-index: 996;
@@ -168,7 +180,6 @@
 
 #about {
     height: 100vh;
-    width: 100vw;
     display: flex;
     align-content: center;
     align-items: center;
@@ -176,19 +187,19 @@
 }
 
 #about .img-container {
-    width: 28vw;
+    width: auto;
+    margin-right: 2vw;
 }
 
 .about-text {
-    font-size: 4vmin;
     font-family: Verdana, sans-serif;
-    color: #464646;
+    color: var(--palette-color-3);
     width: 40vw;
 }
 
 .about-text .description {
     opacity: 0;
-    color: #505050;
+    color: var(--palette-color-3);
     font-weight: bold;
 }
 
@@ -199,7 +210,7 @@
 .about-text .container .small-text{
     font-size: 2.48vmin;
     overflow: hidden;
-    border-right: 0.15rem solid orange;
+    border-right: 0.15vw solid var(--palette-color-4);
     width: 0;
     white-space: nowrap;
 }
@@ -220,8 +231,8 @@
     margin-right: auto;
     display: block;
     opacity: 0;
-    height: auto;
-    width: 20vw;
+    height: 45vmin;
+    width: auto;
     
     position: relative;
 }
@@ -239,24 +250,30 @@
 }
 
 #projects {
-    height: 250vh;
+    height: 175vh;
     display: flex;
+    flex-direction: column;
 }
 
-#projects .container {
-    position: absolute;
+#projects .centered {
+    display: flex;
+    height: 25vh;
+}
+
+#projects .centered .container {
+    margin-top: 15vh;
+    margin-left: 10vw;
     width: 22.5vmin;
+    align-content: center;
+    height: 6vh;
 }
 
 #projects .title {
-    margin-top: 7.5rem;
-    margin-left: 10rem;
     font-size: 5.5vmin;
     font-family: Verdana, sans-serif;
     color: #464646;
-    
     overflow: hidden;
-    border-right: 0.15rem solid orange;
+    border-right: 0.15vw solid var(--palette-color-4);
     width: 0;
     white-space: nowrap;
 }
@@ -271,9 +288,6 @@
     list-style-type: none;
     color: #464646;
     font-family: Verdana, sans-serif;
-
-    /* border: 1px solid red; */
-    height: 190vh;
 }
 
 @keyframes moveIn {
@@ -286,7 +300,6 @@
     width: 40vw;
     margin-bottom: 20vh;
     opacity: 0;
-    /* border: 1px solid red; */
 }
 
 #projects .list li.in-view {
@@ -296,7 +309,7 @@
 }
 
 #projects .list .one {
-    margin-top: 35vh;
+    margin-top: 10vh;
 }
 
 #projects .list .date {
@@ -304,7 +317,7 @@
     font-style: italic;
     font-size: 1.5vmin;
     padding: 0.25vmin;
-    color: rgb(129, 129, 129);
+    color: var(--palette-color-3);
 }
 
 #projects .list .heading {
@@ -329,7 +342,7 @@
 
 #projects .list .button a {
     text-decoration: none;
-    color: #464646;
+    color: var(--palette-color-3);
 }
 
 #projects .list .button .text {
@@ -341,7 +354,7 @@
 
 #projects .list .button:hover .text {
     transition: 0.25s ease-in-out;
-    color:black;
+    color:var(--palette-color-2);
 }
 
 #projects .list .button .arrow {
@@ -353,13 +366,16 @@
     margin-left: 1.4vmin;
 }
 
-#projects .more-projects {
-    position: absolute;
+#projects .button-centered {
+    display: flex;
+    margin-top: 5vh;
+    justify-content: center;
+}
+
+#projects .button-centered .more-projects {
     width: 15vw;
     height: 4vh;
     text-align: center;
-    margin-left: 42.5vw;
-    margin-top: 140vh;
     opacity: 0;
 }
 
@@ -371,7 +387,7 @@
 
 #projects .more-projects a {
     text-decoration: none;
-    color: rgb(129, 129, 129);
+    color: var(--palette-color-2);
     font-weight: bolder;
     font-size: 3vmin;
     font-family: Verdana, sans-serif;
@@ -379,7 +395,7 @@
 
 #projects .more-projects:hover a {
     transition: 0.25s ease-in-out;
-    color: rgb(61, 61, 61);
+    color: var(--palette-color-1);
 }
 
 #projects .more-projects:hover {
@@ -389,7 +405,7 @@
 #projects .more-projects:hover .down-arrow {
     animation: moveArrow 0.25s forwards;
     animation-delay: 0s;
-    border-color: rgb(61, 61, 61);
+    border-color: var(--palette-color-1);
     transition: 0.25s ease-in-out;
 }
 
@@ -399,10 +415,68 @@
 }
 
 .down-arrow {
-    border: solid rgb(129, 129, 129);
+    border: solid var(--palette-color-2);
     border-width: 0 0.7vmin 0.7vmin 0;
     display: inline-block;
     padding: 1vmin;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+}
+
+@media (max-aspect-ratio: 1/1) {
+    /* Tall */
+    .about-text {
+        font-size: 3vmin;
+    }
+    #intro {
+        height: 100vh;
+    }
+    #about {
+        height: 75vh;
+    }
+
+    #projects .title {
+        margin-left: 0vw;
+    }
+    #projects .centered {
+        justify-content: center;
+        height: 15vh;
+    }
+    #projects .centered .container {
+        margin-left: 0vw;
+        margin-top: 5vh;
+        align-self: center;
+    }
+    #projects .list li {
+        margin-left: 15vw;
+        width: 60vw;
+        margin-bottom: 10vh;
+    }
+    #projects .list {
+        margin-top: -5vh;
+        margin-bottom: -5vh;
+    }
+    #projects {
+        height: 115vh;
+    }
+}
+
+@media (min-aspect-ratio: 1/1) {
+    /* Wide */
+    .about-text {
+        font-size: 4vmin;
+    }
+}
+
+@media (aspect-ratio: 1/1) {
+    /* default to wide */
+    .about-text {
+        font-size: 4vmin;
+    }
+}
+
+@media (max-width: 800px) {
+    .intro {
+        width: 75vw;
+    }
 }

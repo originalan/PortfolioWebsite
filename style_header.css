@@ -1,17 +1,19 @@
+:root {
+    --main-background-color: #D66853;
+}
+
 body {
-    background-color: #cde6f0;
+    background-color: var(--main-background-color);
 }
 
 header {
-    background-color: #cde6f0;
+    background-color: var(--main-background-color);
     height: 7vh;
     align-content: center;
     position: fixed;
     width: 100%;
     opacity: 0.8;
     z-index: 998;
-
-    border: 1px solid red;
 }
 
 header nav {
@@ -25,8 +27,6 @@ header nav ul {
     list-style-type: none;
     align-content: center;
     align-items: center;
-
-    border: 1px solid blue;
 }
 
 header nav ul li {
@@ -43,7 +43,7 @@ header nav ul li a {
 
 header nav ul li a:hover {
     transition: 0.25s;
-    opacity: 0.7;
+    opacity: 0.85;
     cursor: pointer;
 }
 
@@ -52,10 +52,6 @@ header nav ul li a:hover {
     left: 0.5vw;
     top: 0;
     align-content: center;
-    width: 6.5vmin;
-    height: 6.5vmin;
-
-    border: 3px solid green;
 }
 
 .header-logo-placement:hover {
