@@ -39,11 +39,11 @@ main .container {
 }
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: orange; }
+    50% { border-color: var(--palette-color-4); }
   }
 .typed-out-text {
     overflow: hidden;
-    border-right: 0.15rem solid orange;
+    border-right: 0.15vw solid var(--palette-color-4);
     width: 0;
     animation: typing 2s steps(50) forwards,
         blink-caret 1s step-end infinite;
@@ -69,13 +69,13 @@ main .container {
     align-content: center;
     text-decoration: none;
     font-family: Verdana, sans-serif;
-    color: rgb(129, 129, 129);
+    color: var(--palette-color-1);
     font-weight: bolder;
 }
 
 .button:hover a {
     transition: 0.25s ease-in-out;
-    color:rgb(61, 61, 61);
+    color:var(--palette-color-0);
 }
 
 @keyframes moveArrow {
@@ -86,12 +86,12 @@ main .container {
 .button:hover .down-arrow {
     animation: moveArrow 0.25s forwards;
     animation-delay: 0s;
-    border-color: rgb(61, 61, 61);
+    border-color: var(--palette-color-0);
     transition: 0.25s ease-in-out;
 }
 
 .down-arrow {
-    border: solid rgb(129, 129, 129);
+    border: solid var(--palette-color-1);
     border-width: 0 0.7vmin 0.7vmin 0;
     display: inline-block;
     padding: 1vmin;
