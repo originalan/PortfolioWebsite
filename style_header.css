@@ -127,7 +127,7 @@ header nav {
 #hamburger-menu input:checked ~ span
 {
   opacity: 1;
-  transform: translate(-0.4vh, -1.4vh) rotate(-45deg);
+  transform: translate(0vh, -1.5vh) rotate(-45deg);
   background: #232323;
 }
 
@@ -139,11 +139,16 @@ header nav {
 
 #hamburger-menu input:checked ~ span:nth-last-child(2)
 {
-  transform: translate(-0.3vh, -0.1vh) rotate(45deg);
+  transform: translate(0.05vh, -0.25vh) rotate(45deg);
 }
 
 #menu {
     position: absolute;
     width: 50vw;
+    border: 3px solid var(--palette-color-0);
+}
 
+#hamburger-menu input:checked ~ ul {
+    display: block;
+    text-decoration: none;
 }
