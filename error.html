@@ -12,15 +12,30 @@
         <header>
             <nav>
                 <div class="header-logo-placement">
-                    <a href="index.html#intro">
+                    <a href="#intro">
                         <img src="images/logo.png" class="header-logo-size">
                     </a>
                 </div>
-                <ul> <!-- bulleted list -->
+                <ul id="standard-menu"> <!-- bulleted list -->
                     <li class="one"><a href="index.html#about">About</a></li>
                     <li class="two"><a href="index.html#projects">Projects</a></li>
                     <li class="three"><a href="contact.html">Contact</a></li>
                 </ul>
+                <div id="hamburger-menu">
+                    <div class="actual-hamburger">
+                        <input type="checkbox" id="burger-box">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div id="menu">
+                            <ul>
+                                <a href="index.html#about"><li>About</li></a>
+                                <a href="index.html#projects"><li>Projects</li></a>
+                                <a href="contact.html"><li>Contact</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </nav>
         </header>
         <main>
@@ -37,5 +52,8 @@
             </div>
             
         </main>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="scripts-simple.js"> </script>
     </body>
 </html>

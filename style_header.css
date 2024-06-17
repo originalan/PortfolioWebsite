@@ -5,6 +5,7 @@
     --palette-color-3: #B3B7EE;
     --palette-color-4: #A2A3BB;
     --main-background-color: #FBF9FF;
+    --header-opacity: 0.8;
 }
 
 body {
@@ -17,10 +18,9 @@ header {
     align-content: center;
     position: fixed;
     width: 100%;
-    opacity: 0.8;
+    opacity: var(--header-opacity);
     z-index: 998;
-
-    border: 1px solid blue;
+    border-bottom: 0.15vh solid var(--palette-color-3);
 }
 
 header nav {
@@ -113,42 +113,67 @@ header nav {
     width: 4vh;
     height: 0.5vh;
     margin-top: 0.75vh;
-
     background: var(--palette-color-0);
+    opacity: 0.8;
     border-radius: 0.5rem;
-
     z-index: 1;
-
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+              opacity 0.25s ease;
 }
 
-#hamburger-menu input:checked ~ span
-{
+#hamburger-menu input:hover ~ span {
+    opacity: 1;
+}
+
+#hamburger-menu input:checked ~ span {
   opacity: 1;
-  transform: translate(0vh, -1.5vh) rotate(-45deg);
+  transform: translate(-0.15vh, -1.5vh) rotate(-45deg);
   background: #232323;
 }
 
-#hamburger-menu input:checked ~ span:nth-last-child(3)
-{
+#hamburger-menu input:checked ~ span:nth-last-child(3){
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#hamburger-menu input:checked ~ span:nth-last-child(2)
-{
-  transform: translate(0.05vh, -0.25vh) rotate(45deg);
+#hamburger-menu input:checked ~ span:nth-last-child(4) {
+  transform: translate(-0.1vh, 1vh) rotate(45deg);
 }
 
 #menu {
     position: absolute;
-    width: 50vw;
-    border: 3px solid var(--palette-color-0);
+    top: 7vh;
+    left: 0;
+    display: flex;
+    opacity: 0;
+    background-color: var(--main-background-color);
+    width: 100%;
+    height: 25vh;
+    transition: 0.25s ease-in-out;
 }
 
-#hamburger-menu input:checked ~ ul {
-    display: block;
+#menu ul li {
     text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    margin-top: 2vh;
+    margin-bottom: 2vh; 
+    font-size: 2.8vh;
+    font-family: Verdana, sans-serif;
+    color: var(--palette-color-3);
+}
+
+#menu ul {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-left: 10vw;
+}
+
+#hamburger-menu input:checked ~ #menu {
+    opacity: var(--header-opacity);
+
+    border-bottom: 0.15vh solid var(--palette-color-3);
+    border-top: 0.15vh solid var(--palette-color-3);
 }
