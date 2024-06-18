@@ -67,7 +67,7 @@
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: var(--palette-color-4); }
-  }
+}
 .container .typed-out-text {
     overflow: hidden;
     border-right: 0.15vw solid var(--palette-color-4);
@@ -295,7 +295,7 @@
 #projects .list li {
     margin-left: 15vw;
     width: 40vw;
-    margin-bottom: 20rem;
+    margin-bottom: 20vh;
     opacity: 0;
 }
 
@@ -307,6 +307,10 @@
 
 #projects .list .one {
     margin-top: 10vh;
+}
+
+#projects .list .three {
+    margin-bottom: 0;
 }
 
 #projects .list .date {
@@ -367,7 +371,7 @@
 
 #projects .button-centered {
     display: flex;
-    margin-top: 1rem;
+    margin-top: 15vh;
     justify-content: center;
 }
 
@@ -488,5 +492,15 @@
 @media (max-width: 1200px) {
     .about-text {
         font-size: 3vmin;
+    }
+}
+@media (max-aspect-ratio: 0.75/1) {
+    #projects {
+        height: 100vh;
+    }
+}
+@media (max-aspect-ratio: 0.5/1) {
+    #projects {
+        height: 85vh;
     }
 }

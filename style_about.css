@@ -15,4 +15,49 @@ body {
 
 main {
     height: 90vh;
+    display: flex;
+    flex-direction: row;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100%}
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--palette-color-4); }
+}
+
+main .left {
+    width: 50vw;
+    margin-left: 5vw;
+}
+main .left .text {
+    margin-top: 30vh;
+    font-family: Verdana, sans-serif;
+    color: var(--palette-color-2);
+    font-size: 3vmin;
+}
+
+main .left .container .title {
+    overflow: hidden;
+    font-size: 2vmin;
+    border-right: 0.15vw solid var(--palette-color-4);
+    color: var(--palette-color-1);
+    width: 0;
+    white-space: nowrap;
+    animation: typing 1.5s steps(20) forwards,
+    blink-caret 1s step-end infinite;
+    animation-delay: 0s, 2s;
+}
+
+main .left .container {
+    width: 21.25vmin;
+    height: 2.5vmin;
+    display: flex;
+    justify-content: left;
+}
+
+main .right {
+    width: auto;
 }
