@@ -2,6 +2,7 @@
     --palette-color-0: #071108;
     --palette-color-1: #364652;
     --palette-color-2: #9395D3;
+    --darker-purple: #6e71ad;
     --palette-color-3: #B3B7EE;
     --palette-color-4: #A2A3BB;
     --main-background-color: #FBF9FF;
@@ -10,6 +11,14 @@
 
 body {
     background-color: var(--main-background-color);
+}
+
+#standard-menu li.current a {
+    color: var(--darker-purple);
+}
+
+#menu ul a li.current {
+    color: var(--darker-purple);
 }
 
 header {
