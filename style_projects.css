@@ -12,3 +12,7 @@ body {
 ::-webkit-scrollbar {
     background: transparent;
 }
+
+main {
+    height: 100vh;
+}
