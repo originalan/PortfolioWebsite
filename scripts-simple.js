@@ -19,15 +19,9 @@ function screenCheck() {
       };
     if (agentID || x.matches) {
         // mobile screen or height is greater than width
-        var y = document.getElementById('standard-menu');
-        y.style.display = 'none';
-        var z = document.getElementById('hamburger-menu');
-        z.style.display = 'block';
+
     } else {
         // desktop
-        var yy = document.getElementById('standard-menu');
-        yy.style.display = 'flex';
-        var zz = document.getElementById('hamburger-menu');
-        zz.style.display = 'none';
+
     }
 }   

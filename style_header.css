@@ -5,7 +5,7 @@
     --palette-color-3: #B3B7EE;
     --palette-color-4: #A2A3BB;
     --main-background-color: #FBF9FF;
-    --header-opacity: 0.8;
+    --header-opacity: 0.97;
 }
 
 body {
@@ -75,7 +75,7 @@ header nav {
 }
 
 #hamburger-menu {
-    display: block;
+    display: none;
     z-index: 1;
 }
 
@@ -173,7 +173,15 @@ header nav {
 
 #hamburger-menu input:checked ~ #menu {
     opacity: var(--header-opacity);
-
     border-bottom: 0.15vh solid var(--palette-color-3);
     border-top: 0.15vh solid var(--palette-color-3);
+}
+
+@media (max-aspect-ratio: 1/1) {
+    #standard-menu {
+        display: none;
+    }
+    #hamburger-menu {
+        display: block;
+    }
 }

@@ -183,6 +183,38 @@
     margin-right: 2vw;
 }
 
+#about .text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#about .text-container .button {
+    margin-top: 0.7vh;
+    margin-left: 1.3vw;
+}
+
+#about .text-container .button a {
+    text-decoration: none;
+    color: var(--palette-color-3);
+    font-weight: bold;
+    font-size: 2vmin;
+    font-family: Verdana, sans-serif;
+}
+
+#about .text-container .button a .arrow {
+    font-size: 2.5vmin;
+}
+
+#about .text-container .button:hover .arrow {
+    margin: 1.4vmin;
+    transition: 0.25s ease-in-out;
+}
+
+#about .text-container .button:hover .text {
+    color: var(--palette-color-2);
+    transition: 0.25s ease-in-out;
+}
+
 .about-text {
     font-family: Verdana, sans-serif;
     color: var(--palette-color-1);
@@ -193,10 +225,6 @@
     opacity: 0;
     color: var(--palette-color-2);
     font-weight: bold;
-}
-
-.about-text .description .emphasis:hover {
-
 }
 
 .about-text .container {
