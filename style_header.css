@@ -69,7 +69,7 @@ header nav {
     left: 0.5vw;
     top: 0;
     align-content: center;
-    opacity: 0.85;
+    opacity: 0.75;
 }
 
 .header-logo-placement:hover {
@@ -211,9 +211,9 @@ footer .email {
 }
 
 footer .email div {
-    width: 15vw;
+    width: 15rem;
     /* border: 1px solid red; */
-    font-size: 2vh;
+    font-size: 2vmin;
     font-family: Verdana, sans-serif;
     color: var(--palette-color-3);
 }
@@ -240,7 +240,7 @@ footer .email .left a:hover {
 }
 
 footer .email .right {
-    margin-left: 5vw;
+    margin-left: 5rem;
     display: flex;
     flex-direction: column;
 }
@@ -248,7 +248,7 @@ footer .email .right {
 footer .email .right div {
     display: flex;
     justify-content: center;
-    font-size: 1.5vh;
+    font-size: 1.5vmin;
 }
 
 footer .email .right .time {
@@ -257,7 +257,7 @@ footer .email .right .time {
 
 footer .icons ul li a img {
     height: auto;
-    width: 2vw;
+    width: 2rem;
 }
 
 footer .icons {
@@ -265,13 +265,14 @@ footer .icons {
     justify-content: center;
     margin-bottom: 1.5vh;
     margin-top: -1vh;
+
 }
 
 footer .icons ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    width: 7.5vw;
+    width: 7.5rem;
 }
 
 footer .icons ul li {
@@ -282,4 +283,41 @@ footer .icons ul li {
 footer .icons ul li:hover {
     transition: 0.25s ease-in-out;
     opacity: 1;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    footer .email .left a {
+        font-size: 0.75rem;
+        text-underline-offset: 0.15rem;
+    }
+    footer .email .right div {
+        font-size: 0.5rem;
+    }
+    footer .email .right {
+        margin-left: 1rem;
+    }
+    footer .email div {
+        width: 10rem;
+    }
+    footer .icons {
+        margin-top: 0.3rem;
+    }
+    @media (min-height: 1000px) {
+        footer .email .left a {
+            font-size: 1.2rem;
+            text-underline-offset: 0.15rem;
+        }
+        footer .email .right div {
+            font-size: 0.75rem;
+        }
+    }
+    @media (max-height: 600px) {
+        footer .email .left a {
+            font-size: 0.6rem;
+            text-underline-offset: 0.15rem;
+        }
+        footer .email .right div {
+            font-size: 0.5rem;
+        }
+    }
 }
