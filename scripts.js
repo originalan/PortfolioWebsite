@@ -1,3 +1,5 @@
+let isContact = false;
+let disabled = false;
 $(document).ready(function () {
 
     screenCheck();
@@ -28,6 +30,36 @@ $(document).ready(function () {
         $.scrollify.move('#intro');
         updateDots();
     });
+
+    $('#about .text-container .emphasis').click(function() {
+        $.scrollify.disable();
+        isContact = true;
+        window.scrollBy({ 
+            top: document.body.scrollHeight, // negative value acceptable
+            left: 0, 
+            behavior: 'smooth' 
+          });
+        document.getElementById("dot-three").classList.replace("origin", "bolded")
+        document.getElementById("dot-two").classList.replace("bolded", "origin")
+        document.getElementById("dot-one").classList.replace("bolded", "origin")
+    });
+});
+
+let scroll = 0;
+let previousScroll = scroll;
+window.addEventListener("scroll", (event) => {
+    if (disabled == false) {
+        previousScroll = scroll
+        scroll = this.scrollY;
+        if (isContact == true) {
+            if (scroll <= (window.innerHeight * 1.2) && previousScroll > scroll) {
+                $.scrollify.enable();
+                $.scrollify.move('about');
+                updateDots();
+                isContact = false;
+            }
+        }
+    }
 });
 
 $(window).on('resize', function () {
@@ -70,6 +102,7 @@ function screenCheck() {
     if (agentID || x.matches) {
         // mobile screen or height is greater than width
         $.scrollify.disable();
+        disabled = true;
         $('section').removeClass('scroll').removeAttr('style');
         $('.scroll-dots div').removeClass('scroll-control');
         $('.scroll-dots div').addClass('invisible');
@@ -80,6 +113,7 @@ function screenCheck() {
         $('.scroll-dots div').removeClass('invisible');
         applyScroll();
         $.scrollify.enable();
+        disabled = false;
     }
 }   
 
@@ -88,7 +122,6 @@ function updateDots() {
     if (window.location.hash) {
         var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
         // hash found
-        console.log(hash);
 
         if (hashes[0] == hash) {
             document.getElementById("dot-one").classList.replace("origin", "bolded")

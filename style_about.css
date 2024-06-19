@@ -52,7 +52,7 @@ main .left .container .title {
 }
 
 main .left .container {
-    width: 21.25vmin;
+    width: 21.4vmin;
     height: 2.5vmin;
     display: flex;
     justify-content: left;
@@ -60,4 +60,89 @@ main .left .container {
 
 main .right {
     width: auto;
+    font-family: Verdana, sans-serif;
+    color: var(--palette-color-2);
+    display: flex;
+    flex-direction: column;
+}
+
+main .right .lists {
+    margin-left: 10vw;
+}
+
+main .right .container {
+    height: 2.5vmin;
+    display: flex;
+    justify-content: left;
+}
+
+main .right .likes .container {
+    width: 11.5vmin;
+}
+
+main .right .likes .container .title {
+    animation: typing 1s steps(20) forwards,
+    blink-caret 1s step-end infinite;
+    animation-delay: 0.25s, 2s;
+}
+
+main .right .learnings .container .title {
+    animation: typing 1.25s steps(20) forwards,
+    blink-caret 1s step-end infinite;
+    animation-delay: 0.5s, 2s;
+}
+
+main .right .learnings .container {
+    width: 19.2vmin;
+}
+
+main .right .title {
+    font-size: 2vmin;
+    color: var(--palette-color-1);
+    overflow: hidden;
+    border-right: 0.15vw solid var(--palette-color-4);
+    width: 0;
+    white-space: nowrap;
+}
+
+main .left .text .description {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards,
+        moveIn 1s forwards;
+    animation-delay: 0s, 0s;
+}
+
+main .right .likes ul {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards,
+        moveIn 1s forwards;
+    animation-delay: 0.25s, 0.25s;
+}
+
+main .right .learnings ul {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards,
+        moveIn 1s forwards;
+    animation-delay: 0.5s, 0.5s;
+}
+
+main .right ul li {
+    font-size: 3vmin;
+}
+
+main .right .likes {
+    margin-top: 30vh;
+}
+
+main .right .learnings {
+    margin-top: 5vh;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes moveIn {
+    from {transform: translateY(3rem)}
+    to {transform: translateY(0rem)}
 }

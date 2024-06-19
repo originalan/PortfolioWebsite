@@ -4,6 +4,10 @@
     margin: 0%;
 }
 
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
 .scroll-control {
     position: fixed;
     left: 2%;
@@ -18,10 +22,10 @@
 .scroll-control .origin {
     cursor: pointer;
     display: block;
-    width: 14px;
-    height: 14px;
+    width: 1.6vmin;
+    height: 1.6vmin;
     border-radius: 50%;
-    margin: 10px 0;
+    margin: 1vmin 0;
     background-color: var(--palette-color-0);
     opacity: 0.6;
 }
@@ -35,10 +39,10 @@
 .bolded {
     cursor: pointer;
     display: block;
-    width: 14px;
-    height: 14px;
+    width: 1.6vmin;
+    height: 1.6vmin;
     border-radius: 50%;
-    margin: 10px 0;
+    margin: 1vmin 0;
     background-color: var(--palette-color-0);
     opacity: 1;
 }
