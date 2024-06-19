@@ -19,10 +19,13 @@ $(document).ready(function () {
     });
 
     $('header nav ul .one').click(function() {
-        $.scrollify.move('#about');
+        $.scrollify.move('#intro');
         updateDots();
     });
     $('header nav ul .two').click(function() {
+
+    });
+    $('header nav ul .three').click(function() {
         $.scrollify.move('#projects');
         updateDots();
     });

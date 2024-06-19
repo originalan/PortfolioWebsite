@@ -193,6 +193,7 @@
 
 .about-text {
     font-family: Verdana, sans-serif;
+    font-size: 4vmin;
     color: var(--palette-color-1);
     width: 40vw;
 }
@@ -432,14 +433,20 @@
 
 @media (max-aspect-ratio: 1/1) {
     /* Tall */
+    #intro .intro {
+        width: 75vw;
+    }
     .about-text {
-        font-size: 3vmin;
+        font-size: 3.5vmin;
     }
     #intro {
         height: 100vh;
     }
     #about {
         height: 75vh;
+    }
+    #about .pic {
+        height: 40vmin;
     }
 
     #projects .title {
@@ -457,28 +464,14 @@
     #projects .list li {
         margin-left: 15vw;
         width: 70vw;
-        margin-bottom: 10vh;
+        margin-bottom: 5vh;
     }
     #projects .list {
         margin-top: -5vh;
         margin-bottom: -5vh;
     }
     #projects {
-        height: 115vh;
-    }
-}
-
-@media (min-aspect-ratio: 1/1) {
-    /* Wide */
-    .about-text {
-        font-size: 4vmin;
-    }
-}
-
-@media (aspect-ratio: 1/1) {
-    /* default to wide */
-    .about-text {
-        font-size: 4vmin;
+        height: 105vh;
     }
 }
 
@@ -502,9 +495,57 @@
     #projects {
         height: 100vh;
     }
+    #projects .list li {
+        width: 93vw;
+        margin-left: 5vw;
+    }
+    #projects .list .date {
+        font-size: 2vmin;
+    }
+    #projects .list .description {
+        font-size: 3vmin;
+    }
+    #projects .list li {
+        margin-bottom: 7.5vh;
+    }
+    #projects .list .button .text {
+        font-size: 2.5vmin;
+    }
+    #projects .list .button .arrow {
+        font-size: 2.5vmin;
+    }
+    #projects .button-centered {
+        margin-top: 11vh;
+    }
+    #intro {
+        height: 50vh;
+    }
+    #about {
+        height: 50vh;
+    }
+    #about .about-text {
+        width: 60vw;
+        font-size: 3.75vmin;
+    }
+
 }
 @media (max-aspect-ratio: 0.5/1) {
     #projects {
-        height: 85vh;
+        height: 75vh;
+    }
+    #projects .list .one {
+        margin-top: 5vh;
+    }
+    #projects .list li {
+        margin-bottom: 5vh;
+    }
+    #projects .button-centered {
+        margin-top: 10vh;
+    }
+    #about {
+        height: 25vh;
+    }
+    #intro {
+        height: 40vh;
     }
 }

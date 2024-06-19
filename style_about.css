@@ -33,10 +33,13 @@ main .left {
     margin-left: 5vw;
 }
 main .left .text {
-    margin-top: 30vh;
+    margin-top: 25vh;
     font-family: Verdana, sans-serif;
     color: var(--palette-color-2);
     font-size: 3vmin;
+}
+main .right .lists {
+    margin-top: -5vh;
 }
 
 main .left .container .title {
@@ -68,6 +71,8 @@ main .right {
 
 main .right .lists {
     margin-left: 10vw;
+    display: flex;
+    flex-direction: column;
 }
 
 main .right .container {
@@ -145,4 +150,81 @@ main .right .learnings {
 @keyframes moveIn {
     from {transform: translateY(3rem)}
     to {transform: translateY(0rem)}
+}
+
+@media (max-aspect-ratio: 1/1) {
+    main {
+        flex-direction: column;
+    }
+    main .left {
+        width: 75vw;
+        margin-left: 12.5vw;
+    }
+    main .right {
+        margin-top: 5vh;
+    }
+    main .right .lists {
+        display: flex;
+        flex-direction: row;
+    }
+    main .right .likes {
+        margin: 0;
+        width: 50vw;
+    }
+    main .right .learnings {
+        margin: 0;
+    }
+    main .right .lists {
+        margin-top: 0;
+    }
+}
+
+@media (max-aspect-ratio: 0.75 / 1) {
+
+    main .left .text {
+        font-size: 4vmin;
+    }
+    main .left .container .title {
+        font-size: 3vmin;
+    }
+    main .left .container {
+        width: 32vmin;
+        height: 4vmin;
+    }
+    main .left .text {
+        margin-top: 20vh;
+    }
+
+    main .right .learnings .container {
+        width: 28.5vmin;
+    }
+    main .right .likes .container {
+        width: 17.2vmin;
+    }
+    main .right .container .title {
+        font-size: 3vmin;
+    }
+    main .right .container {
+        height: 4vmin;
+    }
+    main .right ul li {
+        font-size: 4vmin;
+    }
+
+}
+
+@media (max-aspect-ratio: 0.5 / 1) {
+    main .left .text {
+        font-size: 5vmin;
+    }
+    main .left .container .title {
+        font-size: 4vmin;
+    }
+    main .left .container {
+        width: 42.5vmin;
+        height: 5vmin;
+    }
+    main .left .text {
+        margin-top: 20vh;
+    }
 }
