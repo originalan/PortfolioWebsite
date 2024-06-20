@@ -1,140 +1,101 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-<head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style_header.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alan Qu</title>
-    <link rel="icon" type="image/png" href="images/logo.png" />
-</head>
-
-<body id="body">
-    <header>
-        <nav>
-            <div class="header-logo-placement">
-                <a href="#intro">
-                    <img src="images/logo.png" class="header-logo-size">
-                </a>
-            </div>
-            <ul id="standard-menu"> <!-- bulleted list -->
-                <li class="one current"><a href="index.html#intro">Home</a></li>
-                <li class="two"><a href="about.html">About</a></li>
-                <li class="three"><a href="projects.html">Projects</a></li>
-            </ul>
-            <div id="hamburger-menu">
-                <div class="actual-hamburger">
-                    <input type="checkbox" id="burger-box">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <div id="menu">
-                        <ul>
-                            <a href="index.html#intro"><li class="current">Home</li></a>
-                            <a href="about.html"><li>About</li></a>
-                            <a href="projects.html"><li>Projects</li></a>
-                        </ul>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style_header.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alan Qu</title>
+        <link rel="icon" type="image/png" href="images/logo.png" />
+    </head>
+    <body id="body">
+        <header>
+            <nav>
+                <div class="header-logo-placement">
+                    <a href="#intro">
+                        <img src="images/logo.png" class="header-logo-size">
+                    </a>
+                </div>
+                <ul id="standard-menu"> <!-- bulleted list -->
+                    <li class="one current"><a href="index.html#intro">Home</a></li>
+                    <li class="two"><a href="about.html">About</a></li>
+                    <li class="three"><a href="projects.html">Projects</a></li>
+                </ul>
+                <div id="hamburger-menu">
+                    <div class="actual-hamburger">
+                        <input type="checkbox" id="burger-box">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div id="menu">
+                            <ul>
+                                <a href="index.html#intro"><li class="current">Home</li></a>
+                                <a href="about.html"><li>About</li></a>
+                                <a href="projects.html"><li>Projects</li></a>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <div class="scroll-dots">
-            <div class="scroll-control">
-                <span class="origin" id="dot-one">
-                    <a href="#intro"></a>
-                </span>
-                <span class="origin" id="dot-two">
-                    <a href="#about"></a>
-                </span>
-                <span class="origin" id="dot-three">
-                    <a href="#projects"></a>
-                </span>
-            </div>
-        </div>
-
-        <section id="intro" class="scroll" data-section-name="intro">
-            <div class="intro">
-                <div class="container">
-                    <div class="typed-out-text animate">
-                        <p class="emphasis">
-                            Hi, I'm Alan.
-                        <p>
-                    </div>
-                </div>
-
-                <div class="fade-in-text">
-                    <p class="description animate">
-                        I'm a student in high school working to be a <strong class="emphasis">mechanical
-                            engineer</strong>.
-                    </p>
-                    <p class="small-text animate">
-                        Currently, I am enrolled in <a href="https://www.mhrd.org/domain/102" target="_blank"
-                            class="emphasis link">The Academy for MSE</a>.
-                    </p>
+            </nav>
+        </header>
+        <main>
+            <div class="scroll-dots">
+                <div class="scroll-control">
+                    <span class="origin" id="dot-one">
+                        <a href="#intro"></a>
+                    </span>
+                    <span class="origin" id="dot-two">
+                        <a href="#about"></a>
+                    </span>
+                    <span class="origin" id="dot-three">
+                        <a href="#projects"></a>
+                    </span>
                 </div>
             </div>
-        </section>
 
-        <section id="about" class="scroll" data-section-name="about">
-            <div class="img-container">
-                <img class="pic animate" type="image/jpg" src="images/yearbook-pic.jpg">
-            </div>
-            <div class="text-container">
-                <div class="about-text">
+            <section id="intro" class="scroll" data-section-name="intro">
+                <div class="intro">
                     <div class="container">
+                        <div class="typed-out-text animate">
+                            <p class="emphasis">
+                                Hi, I'm Alan.
+                            <p>
+                        </div>
+                    </div>
+
+                    <div class="fade-in-text">
+                        <p class="description animate">
+                            I'm a student in high school working to be a <strong class="emphasis">mechanical
+                                engineer</strong>.
+                        </p>
                         <p class="small-text animate">
-                            A bit more about me
+                            Currently, I am enrolled in <a href="https://www.mhrd.org/domain/102" target="_blank"
+                                class="emphasis link">The Academy for MSE</a>.
                         </p>
                     </div>
-                    <p class="description animate">
-                        Hey, I'm Alan, a rising senior in high school with a passion for engineering. I enjoy working 
-                        with my hands and even more with others. Through everything, my goal is to keep learning and growing. Feel free to 
-                        <span class="emphasis link">contact me</span>.
-                    </p>
                 </div>
-                <div class="button animate">
-                    <a href="about.html">
-                        <span class="text">
-                            Learn More
-                        </span>
-                        <span class="arrow">
-                            &rarr;
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="normal-scrolling" id="projects" class="scroll" data-section-name="projects">
-            <div class="centered">
-                <div class="container">
-                    <div class="title animate">
-                        <p>Projects</p>
-                    </div>
+            <section id="about" class="scroll" data-section-name="about">
+                <div class="img-container">
+                    <img class="pic animate" src="images/yearbook-pic.jpg">
                 </div>
-            </div>
-            <ul class="list">
-                <li class="one animate">
-                    <div class="date">
-                        september 2023 - present
+                <div class="text-container">
+                    <div class="about-text">
+                        <div class="container">
+                            <p class="small-text animate">
+                                A bit more about me
+                            </p>
+                        </div>
+                        <p class="description animate">
+                            Hey, I'm Alan, a rising senior in high school with a passion for engineering. I enjoy working 
+                            with my hands and even more with others. Through everything, my goal is to keep learning and growing. Feel free to 
+                            <span class="emphasis link">contact me</span>.
+                        </p>
                     </div>
-                    <div class="heading">
-                        FTC Robotics
-                    </div>
-                    <div class="description">
-                        &emsp;&emsp; Serving as the lead programmer and main builder to place high in the state in a competitive robotics challenge. 
-                        <!-- &emsp;&emsp; I participated in the FIRST Tech Challenge (FTC) competition as the lead programmer on the
-                        school team. I programmed teleoperational and autonomous movement using inverse kinematics, finite state machines, and control theory. I also helped signifcantly in modeling and designing the physical robot.   -->
-                    </div>
-                    <div class="images">
-
-                    </div>
-                    <div class="button">
-                        <a href="#about">
+                    <div class="button animate">
+                        <a href="about.html">
                             <span class="text">
                                 Learn More
                             </span>
@@ -143,107 +104,143 @@
                             </span>
                         </a>
                     </div>
-                </li>
-                <li class="two animate">
-                    <div class="date">
-                        september 2023 - present
-                    </div>
-                    <div class="heading">
-                        VoicePilot
-                    </div>
-                    <div class="description">
-                        &emsp;&emsp;A project utilizing face and voice to interact with the computer in a way never seen before. 
-                    </div>
-                    <div class="images">
+                </div>
+            </section>
 
+            <section class="normal-scrolling" id="projects" class="scroll" data-section-name="projects">
+                <div class="centered">
+                    <div class="container">
+                        <div class="title animate">
+                            <p>Projects</p>
+                        </div>
                     </div>
-                    <div  class="button">
-                         <a href="#about">
-                            <span class="text">
-                                Learn More
-                            </span>
-                            <span class="arrow">
-                                &rarr;
-                            </span>
+                </div>
+                <ul class="list">
+                    <li class="one animate">
+                        <div class="date">
+                            september 2023 - present
+                        </div>
+                        <div class="heading">
+                            FTC Robotics
+                        </div>
+                        <div class="description">
+                            &emsp;&emsp; Serving as the lead programmer and main builder to place high in the state in a competitive robotics challenge. 
+                            <!-- &emsp;&emsp; I participated in the FIRST Tech Challenge (FTC) competition as the lead programmer on the
+                            school team. I programmed teleoperational and autonomous movement using inverse kinematics, finite state machines, and control theory. I also helped signifcantly in modeling and designing the physical robot.   -->
+                        </div>
+                        <div class="images">
+
+                        </div>
+                        <div class="button">
+                            <a href="#about">
+                                <span class="text">
+                                    Learn More
+                                </span>
+                                <span class="arrow">
+                                    &rarr;
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="two animate">
+                        <div class="date">
+                            september 2023 - present
+                        </div>
+                        <div class="heading">
+                            VoicePilot
+                        </div>
+                        <div class="description">
+                            &emsp;&emsp;A project utilizing face and voice to interact with the computer in a way never seen before. 
+                        </div>
+                        <div class="images">
+
+                        </div>
+                        <div  class="button">
+                            <a href="#about">
+                                <span class="text">
+                                    Learn More
+                                </span>
+                                <span class="arrow">
+                                    &rarr;
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="three animate">
+                        <div class="date">
+                            september 2023 - present
+                        </div>
+                        <div class="heading">
+                            LEGO Project
+                        </div>
+                        <div class="description">
+                            &emsp;&emsp; Designing and creating a full LEGO set with packaging, engineering drawings, and a physical prototype. 
+                        </div>
+                        <div class="images">
+
+                        </div>
+                        <div  class="button">
+                            <a href="#about">
+                                <span class="text">
+                                    Learn More
+                                </span>
+                                <span class="arrow">
+                                    &rarr;
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="button-centered">
+                    <div class="more-projects animate">
+                        <a href="projects.html">
+                            More Projects <br>
+                            <i class="down-arrow"></i>
                         </a>
                     </div>
-                </li>
-                <li class="three animate">
-                    <div class="date">
-                        september 2023 - present
-                    </div>
-                    <div class="heading">
-                        LEGO Project
-                    </div>
-                    <div class="description">
-                        &emsp;&emsp; Designing and creating a full LEGO set with packaging, engineering drawings, and a physical prototype. 
-                    </div>
-                    <div class="images">
+                </div>
+                
+            </section>
 
-                    </div>
-                    <div  class="button">
-                        <a href="#about">
-                            <span class="text">
-                                Learn More
-                            </span>
-                            <span class="arrow">
-                                &rarr;
-                            </span>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-            <div class="button-centered">
-                <div class="more-projects animate">
-                    <a href="projects.html">
-                        More Projects <br>
-                        <i class="down-arrow"></i>
-                    </a>
+        </main>
+        <footer>
+            <div class="email">
+                <div class="left">
+                    <a href="mailto:originalanqu@gmail.com">Shoot an Email</a>
+                </div>
+                <div class="right">
+                    <span>Average Response Time:</span>
+                    <span class="time">2 Days</span>
                 </div>
             </div>
-            
-        </section>
-
-    </main>
-    <footer>
-        <div class="email">
-            <div class="left">
-                <a href="mailto:originalanqu@gmail.com">Shoot an Email</a>
+            <div class="icons">
+                <ul>
+                    <li class="social-media-overlay-p1">
+                        <a href="https://gmail.com" target="_blank">
+                            <img src="images/gmail-logo.png">
+                        </a>
+                    </li>
+                    <li class="social-media-overlay-p2">
+                        <a href="https://github.com" target="_blank">
+                            <img src="images/github-logo.png">
+                        </a>
+                    </li>
+                    <li class="social-media-overlay-p3">
+                        <a href="https://linkedin.com" target="_blank">
+                            <img src="images/linkedin-logo.png">
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="right">
-                <div>Average Response Time</div>
-                <div class="time">2 Days</div>
-            </div>
-        </div>
-        <div class="icons">
-            <ul>
-                <li class="social-media-overlay-p1">
-                    <a href="https://gmail.com" target="_blank">
-                        <img src="images/gmail-logo.png">
-                    </a>
-                </li>
-                <li class="social-media-overlay-p2">
-                    <a href="https://github.com" target="_blank">
-                        <img src="images/github-logo.png">
-                    </a>
-                </li>
-                <li class="social-media-overlay-p3">
-                    <a href="https://linkedin.com" target="_blank">
-                        <img src="images/linkedin-logo.png">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </footer>
+        </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
-        integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
-        crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
+            integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
+            crossorigin="anonymous"></script>
 
-    <script src="scripts.js"> </script>
-    <script src="animateIfInView.js"></script>
+        <script src="scripts.js"> </script>
+        <script src="animateIfInView.js"></script>
 
-</body>
-
+    </body>
 </html>

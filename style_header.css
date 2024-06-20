@@ -7,6 +7,7 @@
     --palette-color-4: #A2A3BB;
     --main-background-color: #FBF9FF;
     --header-opacity: 0.97;
+    --carat-thickness: 0.15vw;
 }
 
 body {
@@ -197,8 +198,6 @@ header nav {
 
 footer {
     border-top: 1px solid var(--palette-color-2);
-    display: flex;
-    flex-direction: column;
     height: 10vh;
 }
 
@@ -206,13 +205,11 @@ footer .email {
     display: flex;
     height: 7.5vh;
     align-items: center;
-    /* border: 1px solid blue; */
     justify-content: center;
 }
 
 footer .email div {
-    width: 15rem;
-    /* border: 1px solid red; */
+    width: 25vw;
     font-size: 2vmin;
     font-family: Verdana, sans-serif;
     color: var(--palette-color-3);
@@ -241,14 +238,13 @@ footer .email .left a:hover {
 
 footer .email .right {
     margin-left: 5rem;
-    display: flex;
-    flex-direction: column;
+    display: block;
+    text-align: center;
 }
 
-footer .email .right div {
-    display: flex;
-    justify-content: center;
-    font-size: 1.5vmin;
+footer .email .right span {
+    font-size: 2vmin;
+    text-align: center;
 }
 
 footer .email .right .time {
@@ -265,7 +261,6 @@ footer .icons {
     justify-content: center;
     margin-bottom: 1.5vh;
     margin-top: -1vh;
-
 }
 
 footer .icons ul {
@@ -273,6 +268,12 @@ footer .icons ul {
     flex-direction: row;
     list-style-type: none;
     width: 7.5rem;
+}
+
+footer .icons ul li a {
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 footer .icons ul li {
@@ -285,39 +286,33 @@ footer .icons ul li:hover {
     opacity: 1;
 }
 
-@media (max-aspect-ratio: 1/1) {
+@media (max-aspect-ratio: 0.75/1) {
     footer .email .left a {
-        font-size: 0.75rem;
+        font-size: 1.25rem;
         text-underline-offset: 0.15rem;
     }
-    footer .email .right div {
-        font-size: 0.5rem;
-    }
     footer .email .right {
-        margin-left: 1rem;
+        margin-left: 0rem;
     }
     footer .email div {
-        width: 10rem;
+        width: 15rem;
+    }
+    footer .email .right {
+        width: 20rem;
     }
     footer .icons {
         margin-top: 0.3rem;
     }
-    @media (min-height: 1000px) {
-        footer .email .left a {
-            font-size: 1.2rem;
-            text-underline-offset: 0.15rem;
-        }
-        footer .email .right div {
-            font-size: 0.75rem;
-        }
+    footer .icons ul {
+        width: 10rem;
     }
-    @media (max-height: 600px) {
-        footer .email .left a {
-            font-size: 0.6rem;
-            text-underline-offset: 0.15rem;
-        }
-        footer .email .right div {
-            font-size: 0.5rem;
-        }
+    footer {
+        height: 15vh;
+    }
+    footer .icons ul li a img {
+        width: 3rem;
+    }
+    footer .email .right span {
+        font-size: 1.25rem;
     }
 }

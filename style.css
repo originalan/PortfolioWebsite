@@ -74,7 +74,7 @@
 }
 .container .typed-out-text {
     overflow: hidden;
-    border-right: 0.15vw solid var(--palette-color-4);
+    border-right: var(--carat-thickness) solid var(--palette-color-4);
     width: 0;
     white-space: nowrap;
 }
@@ -211,7 +211,7 @@
 .about-text .container .small-text{
     font-size: 2.48vmin;
     overflow: hidden;
-    border-right: 0.15vw solid var(--palette-color-4);
+    border-right: var(--carat-thickness) solid var(--palette-color-4);
     width: 0;
     white-space: nowrap;
     font-weight: light;
@@ -275,7 +275,7 @@
     font-family: Verdana, sans-serif;
     color: var(--palette-color-1);
     overflow: hidden;
-    border-right: 0.15vw solid var(--palette-color-4);
+    border-right: var(--carat-thickness) solid var(--palette-color-4);
     width: 0;
     white-space: nowrap;
 }
@@ -381,7 +381,6 @@
 }
 
 #projects .button-centered .more-projects {
-    width: 15vw;
     height: 4vh;
     text-align: center;
     opacity: 0;
@@ -475,23 +474,10 @@
     }
 }
 
-@media (max-width: 1000px) {
-    .intro {
-        width: 75vw;
-    }
-} 
-
-@media (max-width: 1600px) {
-    .about-text {
-        font-size: 3.25vmin;
-    }
-}
-@media (max-width: 1200px) {
-    .about-text {
-        font-size: 3vmin;
-    }
-}
 @media (max-aspect-ratio: 0.75/1) {
+    body {
+        --carat-thickness: 0.35vw;
+    }
     #projects {
         height: 100vh;
     }
@@ -508,44 +494,192 @@
     #projects .list li {
         margin-bottom: 7.5vh;
     }
+    #projects .list .button {
+        margin-left: 5vw;
+        margin-top: 1vh;
+    }
     #projects .list .button .text {
-        font-size: 2.5vmin;
+        font-size: 4vmin;
     }
     #projects .list .button .arrow {
-        font-size: 2.5vmin;
+        font-size: 4vmin;
     }
     #projects .button-centered {
         margin-top: 11vh;
     }
     #intro {
-        height: 50vh;
+        height: 125vh;
+    }
+    #intro .intro {
+        width: 95vw;
+        margin-left: 2.5vw;
+        font-size: 7.5vmin;
+    }
+    .intro .container {
+        width: 50.5vmin;
+        margin-bottom: 2vh;
+    }
+    .fade-in-text .small-text {
+        font-size: 5vmin;
+        margin-left: 0.3vw;
     }
     #about {
-        height: 50vh;
+        height: 125vh;
+        flex-direction: column;
     }
     #about .about-text {
-        width: 60vw;
-        font-size: 3.75vmin;
+        width: 95vw;
+        font-size: 5vmin;
+    }
+    #about .img-container {
+        margin-bottom: 5vh;
+    }
+    #about .img-container img {
+        width: 70vw;
+        height: auto
+    }
+    #about .container {
+        width: 42.5vmin;
+    }
+    #about .container .small-text {
+        font-size: 4vmin;
+    }
+    #about .text-container .button a {
+        font-size: 3.5vmin;
+    }
+    
+    #about .text-container .button a .arrow {
+        font-size: 3.5vmin;
+    }
+    #about .text-container .button {
+        margin-left: 6vw;
+        margin-top: 2vh;
+    }
+    #projects {
+        height: 150vh;
+    }
+    #projects .title {
+        font-size: 12vmin;
+    }
+    #projects .centered .container {
+        width: 49vmin;
+    }
+    #projects .list .date {
+        font-size: 3.5vmin;
+    }
+    #projects .list .heading {
+        font-size: 8vmin;
+    }
+    #projects .list .description {
+        font-size: 5vmin;
+    }
+    #projects .more-projects a {
+        font-size: 7vmin;
+    }
+    .down-arrow {
+        border-width: 0 2vmin 2vmin 0;
+        padding: 2vmin;
     }
 
 }
 @media (max-aspect-ratio: 0.5/1) {
-    #projects {
-        height: 75vh;
+    #projects .list li {
+        width: 93vw;
+        margin-left: 5vw;
     }
-    #projects .list .one {
-        margin-top: 5vh;
+    #projects .list .date {
+        font-size: 2vmin;
+    }
+    #projects .list .description {
+        font-size: 3vmin;
     }
     #projects .list li {
-        margin-bottom: 5vh;
+        margin-bottom: 7.5vh;
+    }
+    #projects .list .button {
+        margin-left: 5vw;
+        margin-top: 1vh;
+    }
+    #projects .list .button .text {
+        font-size: 5vmin;
+    }
+    #projects .list .button .arrow {
+        font-size: 5vmin;
     }
     #projects .button-centered {
-        margin-top: 10vh;
-    }
-    #about {
-        height: 25vh;
+        margin-top: 11vh;
     }
     #intro {
-        height: 40vh;
+        height: 100vh;
+    }
+    #intro .intro {
+        width: 95vw;
+        margin-left: 2.5vw;
+        font-size: 7.5vmin;
+    }
+    .intro .container {
+        width: 50.5vmin;
+        margin-bottom: 2vh;
+    }
+    .fade-in-text .small-text {
+        font-size: 5vmin;
+        margin-left: 0.3vw;
+    }
+    #about {
+        height: 125vh;
+        flex-direction: column;
+    }
+    #about .about-text {
+        width: 95vw;
+        font-size: 6.5vmin;
+    }
+    #about .img-container {
+        margin-bottom: 5vh;
+    }
+    #about .img-container img {
+        width: 70vw;
+        height: auto
+    }
+    #about .container {
+        width: 53vmin;
+    }
+    #about .container .small-text {
+        font-size: 5vmin;
+    }
+    #about .text-container .button a {
+        font-size: 4vmin;
+    }
+    
+    #about .text-container .button a .arrow {
+        font-size: 4vmin;
+    }
+    #about .text-container .button {
+        margin-left: 6vw;
+        margin-top: 2vh;
+    }
+    #projects {
+        height: 140vh;
+    }
+    #projects .title {
+        font-size: 12vmin;
+    }
+    #projects .centered .container {
+        width: 49vmin;
+    }
+    #projects .list .date {
+        font-size: 4vmin;
+    }
+    #projects .list .heading {
+        font-size: 9vmin;
+    }
+    #projects .list .description {
+        font-size: 6vmin;
+    }
+    #projects .more-projects a {
+        font-size: 7vmin;
+    }
+    .down-arrow {
+        border-width: 0 2vmin 2vmin 0;
+        padding: 2vmin;
     }
 }
