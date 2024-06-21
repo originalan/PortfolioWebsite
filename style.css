@@ -298,10 +298,22 @@
 }
 
 #projects .list li {
-    margin-left: 15vw;
-    width: 40vw;
+    margin-left: 15vw; 
     margin-bottom: 20vh;
     opacity: 0;
+    display: flex; 
+    flex-direction: row;
+}
+
+#projects .list .text-part {
+    width: 45vw;
+}
+#projects .list .image-part {
+    margin-left: 1vw;
+}
+#projects .list .image-part img {
+    height: 35vh;
+    margin-top: -10vh;
 }
 
 #projects .list li.in-view {
@@ -435,6 +447,9 @@
     #intro .intro {
         width: 75vw;
     }
+    #projects .list .image-part {
+        display: none;
+    }
     .about-text {
         font-size: 3.5vmin;
     }
@@ -462,8 +477,10 @@
     }
     #projects .list li {
         margin-left: 15vw;
-        width: 70vw;
         margin-bottom: 5vh;
+    }
+    #projects .list li .text-part {
+        width: 70vw;
     }
     #projects .list {
         margin-top: -5vh;
@@ -482,17 +499,17 @@
         height: 100vh;
     }
     #projects .list li {
-        width: 93vw;
         margin-left: 5vw;
+        margin-bottom: 7.5vh;
+    }
+    #projects .list li .text-part {
+        width: 93vw;
     }
     #projects .list .date {
         font-size: 2vmin;
     }
     #projects .list .description {
         font-size: 3vmin;
-    }
-    #projects .list li {
-        margin-bottom: 7.5vh;
     }
     #projects .list .button {
         margin-left: 5vw;
@@ -584,17 +601,17 @@
 }
 @media (max-aspect-ratio: 0.5/1) {
     #projects .list li {
-        width: 93vw;
         margin-left: 5vw;
+        margin-bottom: 7.5vh;
     }
+    #projects .list li .text-part {
+        width: 93vw;
+    }   
     #projects .list .date {
         font-size: 2vmin;
     }
     #projects .list .description {
         font-size: 3vmin;
-    }
-    #projects .list li {
-        margin-bottom: 7.5vh;
     }
     #projects .list .button {
         margin-left: 5vw;
