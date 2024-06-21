@@ -6,7 +6,8 @@
     --palette-color-3: #B3B7EE;
     --palette-color-4: #A2A3BB;
     --main-background-color: #FBF9FF;
-    --header-opacity: 0.97;
+    --secondary-background-color: #f1e9fe;
+    --header-opacity: 0.9;
     --carat-thickness: 0.15vw;
 }
 
@@ -30,7 +31,7 @@ header {
     width: 100%;
     opacity: var(--header-opacity);
     z-index: 998;
-    border-bottom: 0.15vh solid var(--palette-color-3);
+    /* border-bottom: 0.3vmin solid var(--palette-color-3); */
 }
 
 header nav {
