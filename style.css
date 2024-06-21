@@ -311,6 +311,9 @@
 #projects .list .image-part {
     margin-left: 1vw;
 }
+#projects .list .one .image-part {
+    margin-left: 2.5vw;
+}
 #projects .list .image-part img {
     height: 35vh;
     margin-top: -10vh;
