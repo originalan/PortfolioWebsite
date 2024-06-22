@@ -317,6 +317,7 @@
 #projects .list .image-part img {
     height: 35vh;
     margin-top: -10vh;
+    filter: drop-shadow(0.5vmin 0.5vmin 0.5vmin rgba(50, 50, 50, 0.85));
 }
 
 #projects .list li.in-view {
