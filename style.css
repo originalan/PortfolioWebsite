@@ -251,7 +251,7 @@
 }
 
 #projects {
-    height: 180vh;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
@@ -289,6 +289,7 @@
     list-style-type: none;
     color: var(--palette-color-1);
     font-family: Verdana, sans-serif;
+    margin-bottom: 10vh;
 }
 
 @keyframes moveIn {
@@ -311,12 +312,15 @@
     margin-left: 1vw;
 }
 #projects .list .one .image-part {
-    margin-left: 2.5vw;
+    margin-left: 5.5vw;
 }
 #projects .list .image-part img {
     height: 35vh;
     margin-top: -10vh;
     filter: drop-shadow(0.5vmin 0.5vmin 0.5vmin rgba(50, 50, 50, 0.85));
+}
+#projects .list .three .image-part {
+    margin-left: 4vw;
 }
 
 #projects .list li.in-view {
@@ -498,9 +502,6 @@
     body {
         --carat-thickness: 0.35vw;
     }
-    #projects {
-        height: 100vh;
-    }
     #projects .list li {
         margin-left: 5vw;
         margin-bottom: 7.5vh;
@@ -576,7 +577,7 @@
         margin-top: 2vh;
     }
     #projects {
-        height: 150vh;
+        height: 130vh;
     }
     #projects .title {
         font-size: 12vmin;
@@ -678,7 +679,7 @@
         margin-top: 2vh;
     }
     #projects {
-        height: 140vh;
+        height: 120vh;
     }
     #projects .title {
         font-size: 12vmin;

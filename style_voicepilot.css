@@ -181,12 +181,12 @@ body {
 #middle .right-text.in-view .skills {
     animation: fadeIn 1.5s forwards,
         moveIn 1s forwards;
-    animation-delay: 0.75s, 0.75s;
+    animation-delay: 0.5s, 0.5s;
 }
 
 #middle1 {
-    height: 60vh;
-    background-color: var(--secondary-background-color);
+    height: 75vh;
+    background-color: var(--palette-color-3);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -199,10 +199,9 @@ body {
     justify-content: center;
 }
 #middle1 .m-images div img {
-    width: 15vw;
+    width: 30vw;
     margin-left: 3vw;
     margin-right: 3vw;
-    filter: drop-shadow(0.5vmin 0.5vmin 0.5vmin gray);
 }
 .m-text {
     font-family: Verdana, sans-serif;
@@ -311,7 +310,7 @@ body {
         font-size: 3vmin;
     }
     #middle1 .m-images div img {
-        width: 70vw;
+        width: 100vw;
         margin-bottom: 5vh;
     }
 
