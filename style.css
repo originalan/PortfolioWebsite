@@ -235,8 +235,7 @@
     opacity: 0;
     height: 45vmin;
     width: auto;
-    
-    border-bottom: 1px
+    filter: drop-shadow(0.5vmin 0.5vmin 0.5vmin rgba(50, 50, 50, 0.85));
 }
     
 #about .in-view.description {
@@ -252,7 +251,7 @@
 }
 
 #projects {
-    height: 175vh;
+    height: 180vh;
     display: flex;
     flex-direction: column;
 }

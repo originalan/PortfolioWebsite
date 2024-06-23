@@ -50,7 +50,7 @@ body {
     animation: fadeIn 1.5s forwards,
         moveIn 1s forwards;
     animation-delay: 0s, 0s;
-    width: 30vw;
+    width: 40vw;
     margin-left: auto;
     margin-right: auto;
     height: auto;
@@ -189,16 +189,20 @@ body {
     background-color: var(--secondary-background-color);
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .m-images {
-    margin-top: 2vh;
+    margin-top: 5vh;
     display: flex;
     flex-direction: row;
-    align-items: top;
+    align-items: center;
     justify-content: center;
 }
 #middle1 .m-images div img {
-    width: 30vw;
+    width: 15vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    filter: drop-shadow(0.5vmin 0.5vmin 0.5vmin gray);
 }
 .m-text {
     font-family: Verdana, sans-serif;
@@ -206,56 +210,50 @@ body {
     color: var(--palette-color-1);
     display: flex;
     justify-content: center;
-    height: 25vh;
+    align-items: center;
+    height: 10vh;
 }
 .m-container {
-    margin-top: 5vh;
     width: 80vw;
     text-align: center;
 }
 
 #middle2 {
     height: 75vh;
-    background-color: var(--main-background-color);
-}
-#middle2 .m-images {
-    align-items: center;
-}
-#middle2 .m-images div img {
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 10vh;
-    width: 30vw;
-    filter: drop-shadow(0.5vmin 0.5vmin 0.5vmin gray);
-}
-#middle3 {
-    height: 75vh;
-    background-color: var(--secondary-background-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+#middle2 .m-images {
+    margin-top: 12vh;
+}
+#middle2 .m-images div img {
+    width: 30vw;
+    margin-left: 0.75vw;
+    margin-right: 0.75vw;
+    filter: drop-shadow(0.5vmin 0.5vmin 0.5vmin gray);
+}
+
+#middle3 {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-background-color);
 }
 #middle3 .m-images {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 8vh;
-}
-#middle3 .m-images div {
-    display: flex;
-    justify-content: center;
+    margin-top: 16vh;
 }
 #middle3 .m-images div img {
-    width: 28vw;
-    margin-left: 1vw;
-    margin-right: 1vw;
+    widtH: 30vw;
+    margin-left: 0.75vw;
+    margin-right: 0.75vw;
     filter: drop-shadow(0.5vmin 0.5vmin 0.5vmin gray);
 }
 
 #bottom {
     height: 25vh;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 #bottom .m-text {
     align-self: center;
