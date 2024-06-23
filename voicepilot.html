@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style_header.css">
+        <link rel="stylesheet" href="style_voicepilot.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alan Qu</title>
+        <link rel="icon" type="image/png" href="images/logo.png" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="header-logo-placement">
+                    <a href="index.html#intro">
+                        <img src="images/logo.png" class="header-logo-size">
+                    </a>
+                </div>
+                <ul id="standard-menu"> <!-- bulleted list -->
+                    <li class="one"><a href="index.html#intro">Home</a></li>
+                    <li class="two"><a href="about.html">About</a></li>
+                    <li class="three current"><a href="index.html#projects">Projects</a></li>
+                </ul>
+                <div id="hamburger-menu">
+                    <div class="actual-hamburger">
+                        <input type="checkbox" id="burger-box">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div id="menu">
+                            <ul>
+                                <a href="index.html#intro"><li>Home</li></a>
+                                <a href="about.html"><li>About</li></a>
+                                <a href="index.html#projects"><li class="current">Projects</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section id="top">
+                <div class="image">
+                    <img src="images/voicepilot.png">
+                </div>
+                <div class="align">
+                    <div class="text">
+                        <div class="title">
+                            <div>VoicePilot</div>
+                        </div>
+                        <div class="description">
+                            A project utilizing face and voice to interact with the computer in a way never seen before. 
+                        </div>
+                        <div class="down-arrow">
+                            &darr;
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="middle">
+                <div class="container">
+                    <div class="left-text animate">
+                        <div class="title">
+                            Hey Jarvis, What's the Weather? 
+                        </div>
+                        <div class="description">
+                            Okay, maybe it's not a fully intelligent and sentient assistant like Jarvis, but it can do some pretty cool things. VoicePilot would respond to this command by opening up the weather app automatically. Spawned from a 12 hour hackathon, with development still continuing, VoicePilot aims to be an assistive program that allows users to talk to use their computers with no manual mouse or keyboard input. 
+                            <br><br>We take in user voice input and feed it through a speech recognition algorithm. With this raw speech text, we leverage a large language model, Gemini, to convert it into commands. These commands are then run through the Win32API to use the computer. With Gemini, speech doesn't have to be robotic, allowing for more robust use cases and interpretaions. 
+                        </div>
+                    </div>
+                    <div class="right-text animate">
+                        <div class="timeline">
+                            <span class="emphasis">Timeline</span>
+                            <br>April 2024 - Present
+                        </div>
+                        <div class="skills">
+                            <span class="emphasis">Skills</span>
+                            <br>Python - Tkinter, PyAutoGUI
+                            <br>Large Language Models - Gemini
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="middle1">
+                <div class="m-images">
+                    <div>
+                        <img src="images/lego-cad-4.png">
+                    </div>
+                    <div>
+                        <img src="images/lego-cad-1.png">
+                    </div>
+                    <div>
+                        <img src="images/lego-cad-2.png">
+                    </div>
+                    <div>
+                        <img src="images/lego-cad-3.png">
+                    </div>
+                </div>
+                <div class="m-text">
+                    <div class="m-container">
+                        Utilizing Gemini and 
+                    </div>
+                </div>
+            </section>
+            <section id="bottom">
+                <div class="m-text">
+                    <div class="m-container">
+                        For more, check out the <a class="link" target="_blank" href="https://github.com/Datlightning/VoicePilot/tree/main">Github Repository</a>.
+                    </div>
+                    <div class="m-container quote">
+                        "What all of us have to do is to make sure we are using AI in a way that is for the benefit of humanity, not to the detriment of humanity." -Tim Cook
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="email">
+                <div class="left">
+                    <a href="mailto:originalanqu@gmail.com">Shoot an Email</a>
+                </div>
+                <div class="right">
+                    <span>Average Response Time:</span>
+                    <span class="time">1 Day</span>
+                </div>
+            </div>
+            <div class="icons">
+                <ul>
+                    <li class="social-media-overlay-p1">
+                        <a href="mailto:originalanqu@gmail.com" target="_blank">
+                            <img src="images/gmail-logo.png">
+                        </a>
+                    </li>
+                    <li class="social-media-overlay-p2">
+                        <a href="https://github.com/originalan" target="_blank">
+                            <img src="images/github-logo.png">
+                        </a>
+                    </li>
+                    <li class="social-media-overlay-p3">
+                        <a href="https://www.linkedin.com/in/alan-qu-8018812b6" target="_blank">
+                            <img src="images/linkedin-logo.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="scripts-simple.js"> </script>
+        <script src="animateIfInView.js"></script>
+    </body>
+</html>
