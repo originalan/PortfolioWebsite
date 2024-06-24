@@ -326,7 +326,7 @@
 #projects .list li.in-view {
     animation: fadeIn 1.5s forwards,
         moveIn 1s forwards;
-    animation-delay: 0.5s, 0.5s;
+    animation-delay: 0.25s, 0.25s;
 }
 
 #projects .list .one {
@@ -393,60 +393,9 @@
     margin-left: 1.4vmin;
 }
 
-#projects .button-centered {
-    display: flex;
-    margin-top: 15vh;
-    justify-content: center;
-}
-
-#projects .button-centered .more-projects {
-    height: 4vh;
-    text-align: center;
-    opacity: 0;
-}
-
-#projects .more-projects.in-view {
-    animation: fadeIn 1.5s forwards,
-        moveIn 1s forwards;
-    animation-delay: 0.5s, 0.5s;
-}
-
-#projects .more-projects a {
-    text-decoration: none;
-    color: var(--palette-color-1);
-    font-weight: bolder;
-    font-size: 3vmin;
-    font-family: Verdana, sans-serif;
-}
-
-#projects .more-projects:hover a {
-    transition: 0.25s ease-in-out;
-    color: var(--palette-color-0);
-}
-
-#projects .more-projects:hover {
-    cursor: pointer;
-}
-
-#projects .more-projects:hover .down-arrow {
-    animation: moveArrow 0.25s forwards;
-    animation-delay: 0s;
-    border-color: var(--palette-color-0);
-    transition: 0.25s ease-in-out;
-}
-
 @keyframes moveArrow {
     from {transform: translateY(0rem) rotate(45deg)}
     to {transform: translateY(1rem) rotate(45deg)}
-}
-
-.down-arrow {
-    border: solid var(--palette-color-1);
-    border-width: 0 0.7vmin 0.7vmin 0;
-    display: inline-block;
-    padding: 1vmin;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
 }
 
 @media (max-aspect-ratio: 1/1) {

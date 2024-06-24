@@ -258,9 +258,7 @@ body {
     align-self: center;
     display: flex;
     flex-direction: column;
-}
-#bottom .m-text .m-container {
-    margin-top: 1vh;
+    margin-top: 0;
 }
 .quote {
     color: var(--lighter_gray);

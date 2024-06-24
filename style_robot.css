@@ -258,6 +258,7 @@ body {
     height: 25vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 #bottom .m-text {
     align-self: center;
